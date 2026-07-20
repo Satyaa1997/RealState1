@@ -37,7 +37,7 @@ const Home = () => {
           style={{ backgroundImage: `url(${slides[current]})` }}
         >
           <div className="overlay">
-            <h1>Build X Events & Exhibition</h1>
+            <h1>Build X Events & <span className="Exhibition">Exhibition</span></h1>
 
             <p>
               We Design, Build and Deliver World Class Exhibition Stands & Event
@@ -93,7 +93,7 @@ const Home = () => {
 
           <button>Know More</button>
         </div>
-        
+
         <div className="left">
           <img src={slide6} alt="slide6" />
         </div>
