@@ -2,12 +2,19 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./About.css";
 import aboutImg from "../assets/aboutImg.jpg";
-import About2 from "../assets/About2.png";
+import personimg from "../assets/personimg.webp";
 import work1 from "../assets/work1.webp";
 import work2 from "../assets/work2.jpg";
 import work3 from "../assets/work3.jpg";
+import client1 from "../assets/client1.png";
+import client2 from "../assets/client2.jfif";
+import client3 from "../assets/client3.png";
+import client4 from "../assets/client4.webp";
+import client5 from "../assets/client5.jpg";
 
 const About = () => {
+  const clients = [client1, client2, client3, client4, client5];
+
   const navigate = useNavigate();
 
   return (
@@ -277,12 +284,12 @@ const About = () => {
       {/* Team Section */}
 
       <section className="team">
-        <h2>Meet Our Team</h2>
+        <h2>Director</h2>
 
         <div className="team-card">
-          <img src={About2} alt=" about2-img" />
+          <img src={personimg} alt=" person-img" />
 
-          <h3>Creative Team</h3>
+          <h3>Thomas Jhonson</h3>
 
           <p>
             Our experienced designers, engineers and production experts work
@@ -294,30 +301,70 @@ const About = () => {
       {/* Client Section */}
 
       <section className="clients">
-        <h2>Our Trusted Clients</h2>
+        <div className="section-title">
+          <span>OUR CLIENTS</span>
+          <h2>Trusted By Leading Brands</h2>
+          <p>
+            We are proud to collaborate with businesses and organizations,
+            delivering exceptional exhibition and event solutions.
+          </p>
+        </div>
 
-        <div className="client-logo">
-          <div>Client 1</div>
-          <div>Client 2</div>
-          <div>Client 3</div>
-          <div>Client 4</div>
+        <div className="client-slider">
+          <div className="client-track">
+            {[...clients, ...clients].map((logo, index) => (
+              <div className="client-card" key={index}>
+                <img src={logo} alt="Client Logo" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Project Gallery Preview */}
 
       <section className="gallery">
-        <h2>Our Recent Work</h2>
+        <div className="gallery-heading">
+          <span>OUR PORTFOLIO</span>
 
-        <div className="gallery-grid">
-          <img src={work1} />
-          <img src={work2} />
-          <img src={work3} />
+          <h2>Our Recent Work</h2>
+
+          <p>
+            Discover some of our latest exhibition stands, event setups and
+            fabrication projects crafted with creativity and precision.
+          </p>
         </div>
 
-        <button>View All Projects</button>
-      </section>
+        <div className="gallery-grid">
+          <div className="gallery-card">
+            <img src={work1} alt="" />
+            <div className="gallery-overlay">
+              <h3>Exhibition Stall</h3>
+            </div>
+          </div>
 
+          <div className="gallery-card">
+            <img src={work2} alt="" />
+            <div className="gallery-overlay">
+              <h3>Corporate Event</h3>
+            </div>
+          </div>
+
+          <div className="gallery-card">
+            <img src={work3} alt="" />
+            <div className="gallery-overlay">
+              <h3>Premium Booth</h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="gallery-btn">
+          <button onClick={() => navigate("/project")}>
+            View All Projects
+            <i className="ri-arrow-right-line"></i>
+          </button>
+        </div>
+      </section>
       {/* CTA */}
 
       <section className="cta">
