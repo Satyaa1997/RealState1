@@ -13,6 +13,7 @@ import BookNow from "./assets/Pages/BookNow";
 import Footer from "./Component/Footer";
 import ScrollTop from "./Component/ScrollTop";
 import Loan from "./Component/Loan";
+import ProjectDetail from "./Component/ProjectDetail";
 
 const App = () => {
   return (
@@ -36,6 +37,8 @@ const App = () => {
         <Route path="/testimonial" element={<Testimonial />} />
 
         <Route path="/booknow" element={<BookNow />} />
+
+        <Route path="/project/:id" element={<ProjectDetail />} />
 
         <Route path="/loan" element={<Loan />} />
 

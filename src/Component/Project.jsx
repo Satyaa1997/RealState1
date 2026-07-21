@@ -7,9 +7,12 @@ import project3 from "../assets/project3.jfif";
 import project4 from "../assets/project4.jfif";
 import project5 from "../assets/project5.jfif";
 import project6 from "../assets/project6.jfif";
+import { useNavigate } from "react-router-dom";
 
 const Project = () => {
 
+
+    const navigate = useNavigate();
 
     const [category, setCategory] = useState("All");
     const [year, setYear] = useState("All");
@@ -18,6 +21,7 @@ const Project = () => {
 
   const projects = [
     {
+    id: 1,
     image: projet1,
     title: "Exhibition Stall",
     category: "Exhibition",
@@ -25,6 +29,7 @@ const Project = () => {
     location: "Delhi",
   },
   {
+    id: 2,
     image: project2,
     title: "Build X Projects",
     category: "Fabrication",
@@ -32,6 +37,7 @@ const Project = () => {
     location: "Mumbai",
   },
   {
+    id: 3,
     image: project3,
     title: "Product Launch",
     category: "Event",
@@ -39,6 +45,7 @@ const Project = () => {
     location: "Noida",
   },
   {
+    id: 4,
     image: project4,
     title: "Fabrication Stand",
     category: "Exhibition",
@@ -46,6 +53,7 @@ const Project = () => {
     location: "Delhi",
   },
   {
+    id: 5,
     image: project5,
     title: "Premium Stall",
     category: "Corporate",
@@ -53,6 +61,7 @@ const Project = () => {
     location: "Mumbai",
   },
   {
+    id: 6,
     image: project6,
     title: "Conference Booth",
     category: "Technical",
@@ -85,20 +94,24 @@ const filteredProjects = projects.filter((item) => {
         {/* Left */}
 
         <div className="project-grid">
-          {filteredProjects.map((item, index) => (
-            <div className="project-card" key={index}>
-              <div className="project-image">
-                <img src={item.image} alt="" />
-              </div>
+           {filteredProjects.map((item) => (
+             <div
+               className="project-card"
+               key={item.id}
+               onClick={() => navigate(`/project/${item.id}`)}
+               style={{ cursor: "pointer" }}
+             >
+               <div className="project-image">
+                 <img src={item.image} alt={item.title} />
+               </div>
 
-              <div className="project-content">
-                <h3>{item.title}</h3>
-
-                <span>{item.category}</span>
-              </div>
-            </div>
-          ))}
-        </div>
+               <div className="project-content">
+                 <h3>{item.title}</h3>
+                 <span>{item.category}</span>
+               </div>
+             </div>
+           ))}
+         </div>
 
         {/* Right */}
 
