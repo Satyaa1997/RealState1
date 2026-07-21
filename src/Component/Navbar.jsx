@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo3 from "../assets/logo3.JPG";
 import { Link } from "react-router-dom";

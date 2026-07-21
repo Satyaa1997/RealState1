@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Rural.css";
 import { useNavigate } from 'react-router-dom'
 import rural1 from '../../assets/rural1.jpg'
 import rural2 from '../../assets/rural2.avif'

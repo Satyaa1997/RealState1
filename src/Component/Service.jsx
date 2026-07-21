@@ -1,6 +1,6 @@
 import React from "react";
 
-
+import "./Service.css";
 import img5 from "../assets/gallery1.jpg";
 import img6 from "../assets/gallery2.jfif";
 import img7 from "../assets/gallery3.jfif";

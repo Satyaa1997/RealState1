@@ -1,0 +1,413 @@
+
+/*---------------------------------------Urban-----------------------------------*/
+/* ==========================================
+            Urban Banner
+========================================== */
+
+.urban-banner{
+    width:100%;
+    height:70vh;
+    background:url("./assets/urban-banner.png") center/cover no-repeat;
+    position:relative;
+}
+
+.urban-banner::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.urban-banner-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:#fff;
+    width:90%;
+}
+
+.urban-banner-content h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.urban-banner-content p{
+    font-size:22px;
+}
+
+
+/* ==========================================
+            About Section
+========================================== */
+
+.urban-about{
+    width:90%;
+    margin:90px auto;
+    display:flex;
+    align-items:center;
+    gap:60px;
+}
+
+.urban-image{
+    flex:1;
+}
+
+.urban-image img{
+    width:100%;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.urban-image img:hover{
+    transform:scale(1.05);
+}
+
+.urban-content{
+    flex:1;
+}
+
+.urban-content span{
+    color:#0077ff;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.urban-content h2{
+    font-size:45px;
+    margin:20px 0;
+    color:#1d3557;
+}
+
+.urban-content p{
+    color:#666;
+    line-height:32px;
+    margin-bottom:18px;
+}
+
+
+/* ==========================================
+            Gallery
+========================================== */
+
+.urban-gallery{
+    width:90%;
+    margin:80px auto;
+}
+
+.urban-gallery h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:45px;
+}
+
+.urban-gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.urban-gallery-grid img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.urban-gallery-grid img:hover{
+    transform:scale(1.05);
+    box-shadow:0 20px 35px rgba(0,0,0,.18);
+}
+
+
+/* ==========================================
+            Benefits
+========================================== */
+
+.urban-benefits{
+    background:#f5f8fc;
+    padding:90px 8%;
+}
+
+.urban-benefits h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.urban-benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.urban-card{
+    background:#fff;
+    text-align:center;
+    padding:35px;
+    border-radius:15px;
+    font-size:40px;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    cursor:pointer;
+}
+
+.urban-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 35px rgba(0,119,255,.25);
+}
+
+.urban-card h3{
+    font-size:24px;
+    margin:18px 0;
+}
+
+.urban-card p{
+    font-size:16px;
+    line-height:28px;
+    color:#666;
+}
+
+
+/* ==========================================
+            Article
+========================================== */
+
+.urban-article{
+    width:90%;
+    margin:90px auto;
+    display:flex;
+    align-items:center;
+    gap:60px;
+}
+
+.urban-article-left{
+    flex:1;
+}
+
+.urban-article-left h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.urban-article-left p{
+    color:#666;
+    line-height:32px;
+    margin-bottom:18px;
+}
+
+.urban-article-right{
+    flex:1;
+}
+
+.urban-article-right img{
+    width:100%;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.urban-article-right img:hover{
+    transform:scale(1.05);
+}
+
+
+/* ==========================================
+            Features
+========================================== */
+
+.urban-features{
+    background:#fff;
+    padding:90px 8%;
+}
+
+.urban-features h2{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.urban-feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.feature-box{
+    background:#0077ff;
+    color:#fff;
+    padding:30px;
+    text-align:center;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:600;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.feature-box:hover{
+    background:#005edb;
+    transform:translateY(-8px);
+}
+
+
+/* ==========================================
+            CTA
+========================================== */
+
+.urban-cta{
+    background:linear-gradient(135deg,#0077ff,#009dff);
+    color:#fff;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.urban-cta h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.urban-cta p{
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.urban-cta button{
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    background:#fff;
+    color:#0077ff;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.urban-cta button:hover{
+    background:#0d1b2a;
+    color:#fff;
+}
+
+
+/* ==========================================
+            Tablet
+========================================== */
+
+@media(max-width:992px){
+
+.urban-banner-content h1{
+    font-size:45px;
+}
+
+.urban-banner-content p{
+    font-size:18px;
+}
+
+.urban-about,
+.urban-article{
+    flex-direction:column;
+}
+
+.urban-gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.urban-benefit-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.urban-feature-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.urban-content h2,
+.urban-gallery h2,
+.urban-benefits h2,
+.urban-article-left h2,
+.urban-features h2,
+.urban-cta h2{
+    font-size:34px;
+}
+
+}
+
+
+/* ==========================================
+            Mobile
+========================================== */
+
+@media(max-width:768px){
+
+.urban-banner{
+    height:55vh;
+}
+
+.urban-banner-content h1{
+    font-size:34px;
+}
+
+.urban-banner-content p{
+    font-size:16px;
+}
+
+.urban-about{
+    gap:30px;
+    margin:60px auto;
+}
+
+.urban-content h2{
+    font-size:28px;
+}
+
+.urban-content p{
+    line-height:28px;
+}
+
+.urban-gallery-grid{
+    grid-template-columns:1fr;
+}
+
+.urban-gallery-grid img{
+    height:240px;
+}
+
+.urban-benefit-grid{
+    grid-template-columns:1fr;
+}
+
+.urban-feature-grid{
+    grid-template-columns:1fr;
+}
+
+.urban-article{
+    gap:30px;
+}
+
+.urban-article-left h2{
+    font-size:28px;
+}
+
+.urban-article-left p{
+    line-height:28px;
+}
+
+.urban-gallery h2,
+.urban-benefits h2,
+.urban-features h2,
+.urban-cta h2{
+    font-size:30px;
+}
+
+.urban-cta{
+    padding:70px 20px;
+}
+
+.urban-cta button{
+    width:100%;
+    max-width:250px;
+}
+
+}

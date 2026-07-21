@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Urban.css";
 import { useNavigate } from 'react-router-dom'
 import urban1 from '../../assets/urban1.jpg'
 import urban2 from '../../assets/urban2.jpg'
@@ -185,19 +186,21 @@ const Urban = () => {
 
       {/* CTA */}
 
-      <section className="urban-cta">
+       <section>
+        <div className="contact-bottom">
 
-        <h2>Find Your Dream Urban Plot Today</h2>
+        <h2>Ready to Invest in Your Future?</h2>
 
         <p>
-          Invest in premium city plots with the best prices, excellent
-          connectivity, and guaranteed future growth.
+          Contact Build X today and explore premium rural and urban plots with
+          complete legal documentation and trusted guidance.
         </p>
 
-        <button onClick={()=> navigate("/contact")}>Contact Us</button>
+        <button onClick={()=> navigate("/booknow")} >Book Site Visit</button>
+
+      </div>
 
       </section>
-
     </>
   )
 }

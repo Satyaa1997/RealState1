@@ -1,4 +1,5 @@
 import React from "react";
+import "./Home.css";
 import { useState, useEffect } from "react";
 import About2 from "../assets/About2.png"
 import slide1 from "../assets/slide1.jpg";

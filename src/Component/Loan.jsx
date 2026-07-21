@@ -1,4 +1,5 @@
 import React from "react";
+import "./Loan.css";
 
 import hdfc from "../assets/hdfc.jfif";
 import sbi from "../assets/sbi.jfif";

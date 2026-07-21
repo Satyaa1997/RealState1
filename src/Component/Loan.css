@@ -1,0 +1,410 @@
+
+/*----------------------------Loan-------------------------------------*/
+/*=========================
+        LOAN PAGE
+=========================*/
+
+.loan-page{
+    width:100%;
+    background:#f8fafc;
+    overflow:hidden;
+}
+
+/*=========================
+        HERO
+=========================*/
+
+.loan-banner{
+    width:100%;
+    min-height:85vh;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("./assets/loan-banner.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.loan-overlay{
+    max-width:850px;
+    color:#fff;
+}
+
+.loan-overlay span{
+    display:inline-block;
+    background:#0d6efd;
+    color:#fff;
+    padding:8px 20px;
+    border-radius:30px;
+    font-size:15px;
+    margin-bottom:20px;
+}
+
+.loan-overlay h1{
+    font-size:55px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.loan-overlay p{
+    font-size:18px;
+    line-height:30px;
+    color:#eee;
+    margin-bottom:35px;
+}
+
+.loan-btns{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.loan-btns button{
+    padding:14px 34px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#0d6efd;
+    color:#fff;
+    font-size:17px;
+    transition:.3s;
+}
+
+.loan-btns button:hover{
+    background:#084298;
+}
+
+.outline-btn{
+    background:transparent !important;
+    border:2px solid #fff !important;
+}
+
+.outline-btn:hover{
+    background:#fff !important;
+    color:#000 !important;
+}
+
+/*=========================
+      BANK PARTNERS
+=========================*/
+
+.partner-section{
+    padding:80px 7%;
+    text-align:center;
+}
+
+.partner-section h2{
+    font-size:40px;
+    color:#222;
+}
+
+.partner-section p{
+    color:#666;
+    margin:15px 0 45px;
+}
+
+.partner-slider{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    padding:20px 0;
+}
+
+.partner-track{
+    display:flex;
+    width:max-content;
+    animation:bankMove 22s linear infinite;
+}
+.partner-slider:hover .partner-track{
+    animation-play-state:paused;
+}
+
+.partner-card{
+    width:240px;
+    min-height:240px;
+    margin:0 18px;
+    background:#fff;
+    border-radius:18px;
+    padding:28px 22px;
+    text-align:center;
+    flex-shrink:0;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+
+    box-shadow:
+    0 12px 35px rgba(0,0,0,.08);
+
+    transition:.4s;
+}
+
+.partner-card:hover{
+    transform:translateY(-8px);
+}
+
+.partner-card img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    margin-bottom:18px;
+}
+
+.partner-card h4{
+    font-size:20px;
+    color:#222;
+    margin-bottom:10px;
+}
+
+.partner-card span{
+    color:#777;
+}
+
+.partner-card h3{
+    color:#0d6efd;
+    margin-top:10px;
+}
+@keyframes bankMove{
+
+0%{
+    transform:translateX(-50%);
+}
+
+100%{
+    transform:translateX(0%);
+}
+
+}
+
+@keyframes scrollBank{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
+/*=========================
+        BENEFITS
+=========================*/
+
+.benefits{
+    padding:80px 7%;
+    background:#f1f5f9;
+    text-align:center;
+}
+
+.benefits h2{
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.benefit-card{
+    background:#fff;
+    padding:35px 25px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.benefit-card:hover{
+    transform:translateY(-10px);
+}
+
+.benefit-card i{
+    font-size:55px;
+    color:#0d6efd;
+}
+
+.benefit-card h3{
+    margin:20px 0 12px;
+}
+
+.benefit-card p{
+    color:#666;
+    line-height:28px;
+}
+
+/*=========================
+        PROCESS
+=========================*/
+
+.loan-process{
+    padding:80px 7%;
+    text-align:center;
+}
+
+.loan-process h2{
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.process-card{
+    background:#fff;
+    padding:35px 25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.process-card:hover{
+    transform:translateY(-8px);
+}
+
+.process-card span{
+    width:65px;
+    height:65px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    border-radius:50%;
+    background:#0d6efd;
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.process-card h3{
+    margin-bottom:12px;
+}
+
+.process-card p{
+    color:#666;
+    line-height:28px;
+}
+
+/*=========================
+        CTA
+=========================*/
+
+.loan-cta{
+    padding:90px 20px;
+    background:#0d6efd;
+    color:#fff;
+    text-align:center;
+}
+
+.loan-cta h2{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.loan-cta p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.loan-cta button{
+    padding:15px 40px;
+    border:none;
+    background:#fff;
+    color:#0d6efd;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.loan-cta button:hover{
+    background:#222;
+    color:#fff;
+}
+
+/*=========================
+      RESPONSIVE
+=========================*/
+
+@media(max-width:992px){
+
+.loan-overlay h1{
+font-size:42px;
+}
+
+.benefit-grid,
+.process-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.loan-banner{
+min-height:70vh;
+}
+
+.loan-overlay h1{
+font-size:34px;
+}
+
+.loan-overlay p{
+font-size:16px;
+line-height:28px;
+}
+
+.partner-section h2,
+.benefits h2,
+.loan-process h2,
+.loan-cta h2{
+font-size:32px;
+}
+
+.partner-card{
+width:200px;
+}
+
+}
+
+@media(max-width:576px){
+
+.loan-overlay h1{
+font-size:28px;
+}
+
+.loan-btns{
+flex-direction:column;
+align-items:center;
+}
+
+.loan-btns button{
+width:220px;
+}
+
+.partner-card{
+width:180px;
+padding:20px;
+}
+
+.benefit-grid,
+.process-grid{
+grid-template-columns:1fr;
+}
+
+.loan-cta h2{
+font-size:26px;
+}
+
+.loan-cta p{
+font-size:15px;
+}
+
+}

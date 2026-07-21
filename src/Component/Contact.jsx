@@ -1,10 +1,48 @@
 import React from "react";
+import "./Contact.css";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
 
 
   const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  city: "",
+  property: "",
+  message: "",
+});
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  if (
+    !formData.name ||
+    !formData.email ||
+    !formData.phone ||
+    !formData.property ||
+    !formData.message
+  ) {
+    alert("Please fill all required fields.");
+    return;
+  }
+
+  alert("Thank you! Our team will contact you shortly.");
+
+  // Reset Form
+  setFormData({
+    name: "",
+    email: "",
+    phone: "",
+    city: "",
+    property: "",
+    message: "",
+  });
+};
 
   return (
     <section className="contact-section">
@@ -31,34 +69,72 @@ const Contact = () => {
 
           <h3>Send Your Inquiry</h3>
 
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
 
             <div className="input-group">
-              <input type="text" placeholder="Full Name" required />
-              <input type="email" placeholder="Email Address" required />
+              <input
+                type="text"
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+              />
+
+              <input
+               type="email"
+               placeholder="Email Address"
+               value={formData.email}
+               onChange={(e) =>
+                 setFormData({ ...formData, email: e.target.value })
+               }
+             />
             </div>
 
             <div className="input-group">
-              <input type="tel" placeholder="Phone Number" required />
-              <input type="text" placeholder="City" />
+              <input
+                 type="tel"
+                 placeholder="Phone Number"
+                 value={formData.phone}
+                 onChange={(e) =>
+                   setFormData({ ...formData, phone: e.target.value })
+                 }
+               />
+              <input
+                 type="text"
+                 placeholder="City"
+                 value={formData.city}
+                 onChange={(e) =>
+                   setFormData({ ...formData, city: e.target.value })
+                 }
+               />
             </div>
 
-            <select>
-              <option>Select Property</option>
-              <option>Rural Area Plot</option>
-              <option>Urban Area Plot</option>
-              <option>Commercial Plot</option>
-              <option>Farm Land</option>
-            </select>
+           <select
+               value={formData.property}
+               onChange={(e) =>
+                 setFormData({ ...formData, property: e.target.value })
+               }
+             >
+               <option value="">Select Property</option>
+               <option>Rural Area Plot</option>
+               <option>Urban Area Plot</option>
+               <option>Commercial Plot</option>
+               <option>Farm Land</option>
+             </select>
 
             <textarea
-              rows="5"
-              placeholder="Write Your Message..."
-            ></textarea>
+                rows="5"
+                placeholder="Write Your Message..."
+                value={formData.message}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
+              />
 
             <button type="submit">
-              Send Inquiry
-            </button>
+                Send Inquiry
+             </button>
 
           </form>
 

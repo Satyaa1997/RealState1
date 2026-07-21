@@ -1,8 +1,15 @@
 import React from "react";
-
-import aboutImg from "../assets/aboutImg.jpg"
+import { useNavigate } from "react-router-dom";
+import "./About.css";
+import aboutImg from "../assets/aboutImg.jpg";
+import About2 from "../assets/About2.png";
+import work1 from "../assets/work1.webp";
+import work2 from "../assets/work2.jpg";
+import work3 from "../assets/work3.jpg";
 
 const About = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* Banner */}
@@ -13,24 +20,22 @@ const About = () => {
         </div>
       </section>
 
-      {/* Company */}
+      {/* Company Introduction */}
 
       <section className="company">
-
         <div className="company-image">
-          <img src={aboutImg} alt="About Build X" />
+          <img src={aboutImg} alt="about-x-img" />
         </div>
 
         <div className="company-content">
-
           <span>WHO WE ARE</span>
 
           <h2>Build X Events & Exhibition</h2>
 
           <p>
             Build X Events & Exhibition is one of the leading companies
-            specializing in exhibition stand design, event production,
-            interior solutions and technical services.
+            specializing in exhibition stand design, event production, interior
+            solutions and technical services.
           </p>
 
           <p>
@@ -39,73 +44,20 @@ const About = () => {
             client expectations.
           </p>
 
-          <button>Contact Us</button>
-
-        </div>
-
-      </section>
-
-      {/* Why Choose */}
-
-      <section className="why">
-
-        <h2>Why Choose Us</h2>
-
-        <div className="why-box">
-
-          <div className="card">
-            <h3><i className="ri-award-fill"></i></h3>
-            <h4>Quality Work</h4>
-            <p>Premium finishing with world-class standards.</p>
-          </div>
-
-          <div className="card">
-            <h3><i className="ri-flashlight-fill"></i></h3>
-            <h4>Fast Delivery</h4>
-            <p>Projects completed on schedule every time.</p>
-          </div>
-
-          <div className="card">
-            <h3><i class="ri-group-3-line"></i></h3>
-            <h4>Our Team</h4>
-            <p>Our dedicated team of experienced professionals is committed to delivering innovative solutions with precision and excellence.</p>
-          </div>
-
-          <div className="card">
-            <h3><i class="ri-body-scan-line"></i></h3>
-            <h4>Factory Capability</h4>
-            <p>State-of-the-art factory with advanced machinery and strict quality control processes.
-              Committed to delivering excellence, efficiency, and customer satisfaction in every project..</p>
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* Mission Vision */}
-
-      <section className="mission">
-
-        <div className="mission-box">
-          <h2>Our Mission</h2>
           <p>
-            Our mission is to help people find the perfect property with complete trust and transparency. We are committed to providing high-quality residential and commercial plots at the best locations and affordable prices. Our goal is to make property buying simple, secure, and hassle-free for every customer. We focus on honest dealings, clear documentation, and excellent customer service. By understanding our clients' needs, we deliver reliable real estate solutions that create long-term value. We strive to build lasting relationships through integrity, professionalism, and customer satisfaction. Our vision is to turn every property investment into a successful and rewarding experience.
+            With a team of creative designers, engineers and production
+            specialists, we transform ideas into impactful brand experiences
+            through innovative designs, premium fabrication and professional
+            execution.
           </p>
-        </div>
 
-        <div className="mission-box">
-          <h2>Our Vision</h2>
-          <p>
-            Our vision is to become one of the most trusted and respected real estate companies by delivering exceptional value to our customers. We aim to create modern, sustainable, and well-planned communities that improve the quality of life. Through innovation, transparency, and customer-focused services, we strive to make property ownership simple and accessible for everyone. We are committed to building long-term relationships based on trust, integrity, and excellence. Our goal is to shape a better future by providing secure investment opportunities and helping people turn their dream of owning property into reality.
-          </p>
+          <button onClick={() => navigate("/contact")}>Contact Us</button>
         </div>
-
       </section>
 
       {/* Counter */}
 
       <section className="counter">
-
         <div>
           <h2>15+</h2>
           <p>Years Experience</p>
@@ -113,7 +65,7 @@ const About = () => {
 
         <div>
           <h2>500+</h2>
-          <p>Projects</p>
+          <p>Projects Completed</p>
         </div>
 
         <div>
@@ -123,15 +75,252 @@ const About = () => {
 
         <div>
           <h2>50+</h2>
-          <p>Team Members</p>
+          <p>Professional Team</p>
+        </div>
+      </section>
+
+      {/* Our Expertise */}
+
+      <section className="expertise">
+        <h2>Our Expertise</h2>
+
+        <div className="expertise-box">
+          <div className="card">
+            <i className="ri-pencil-ruler-fill"></i>
+
+            <h3>Exhibition Design</h3>
+
+            <p>
+              Creative and attractive stall designs that represent your brand
+              identity.
+            </p>
+          </div>
+
+          <div className="card">
+            <i className="ri-hammer-fill"></i>
+
+            <h3>Stall Fabrication</h3>
+
+            <p>
+              High quality fabrication with premium materials and finishing.
+            </p>
+          </div>
+
+          <div className="card">
+            <i className="ri-calendar-event-fill"></i>
+
+            <h3>Event Production</h3>
+
+            <p>
+              Complete event management solutions from planning to execution.
+            </p>
+          </div>
+
+          <div className="card">
+            <i className="ri-lightbulb-fill"></i>
+
+            <h3>Technical Solutions</h3>
+
+            <p>Advanced lighting, audio and technical support for events.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose */}
+
+      <section className="why">
+        <h2>Why Choose Us</h2>
+
+        <div className="why-box">
+          <div className="card">
+            <h3>
+              <i className="ri-award-fill"></i>
+            </h3>
+
+            <h4>Quality Work</h4>
+
+            <p>Premium finishing with world-class standards.</p>
+          </div>
+
+          <div className="card">
+            <h3>
+              <i className="ri-flashlight-fill"></i>
+            </h3>
+
+            <h4>Fast Delivery</h4>
+
+            <p>Projects completed on schedule every time.</p>
+          </div>
+
+          <div className="card">
+            <h3>
+              <i className="ri-group-3-line"></i>
+            </h3>
+
+            <h4>Our Team</h4>
+
+            <p>
+              Our dedicated team of experienced professionals delivers
+              innovative solutions with precision and excellence.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3>
+              <i className="ri-body-scan-line"></i>
+            </h3>
+
+            <h4>Factory Capability</h4>
+
+            <p>
+              State-of-the-art factory with advanced machinery and strict
+              quality control processes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Journey */}
+
+      <section className="journey">
+        <h2>Our Journey</h2>
+
+        <div className="timeline">
+          <div className="timeline-item">
+            <h3>2020</h3>
+
+            <p>
+              Company Started with a vision to deliver creative exhibition
+              solutions.
+            </p>
+          </div>
+
+          <div className="timeline-item">
+            <h3>2023</h3>
+
+            <p>
+              Expanded our services with advanced fabrication and event
+              solutions.
+            </p>
+          </div>
+
+          <div className="timeline-item">
+            <h3>2026</h3>
+
+            <p>Successfully completed 500+ projects with trusted clients.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Vision */}
+
+      <section className="mission">
+        <div className="mission-box">
+          <h2>Our Mission</h2>
+
+          <p>
+            Our mission is to help people find the perfect property with
+            complete trust and transparency. We are committed to providing
+            high-quality residential and commercial plots at the best locations
+            and affordable prices. Our goal is to make property buying simple,
+            secure, and hassle-free for every customer. We focus on honest
+            dealings, clear documentation, and excellent customer service. By
+            understanding our clients' needs, we deliver reliable real estate
+            solutions that create long-term value. We strive to build lasting
+            relationships through integrity, professionalism, and customer
+            satisfaction.
+          </p>
         </div>
 
+        <div className="mission-box">
+          <h2>Our Vision</h2>
+
+          <p>
+            Our vision is to become one of the most trusted and respected real
+            estate companies by delivering exceptional value to our customers.
+            We aim to create modern, sustainable, and well-planned communities
+            that improve the quality of life. Through innovation, transparency,
+            and customer-focused services, we strive to make property ownership
+            simple and accessible for everyone.
+          </p>
+        </div>
+      </section>
+
+      {/* Our Values */}
+
+      <section className="values">
+        <h2>Our Values</h2>
+
+        <div className="values-box">
+          <div>
+            <h3>Creativity</h3>
+            <p>Innovative designs that create memorable experiences.</p>
+          </div>
+
+          <div>
+            <h3>Quality</h3>
+            <p>Premium materials and flawless execution.</p>
+          </div>
+
+          <div>
+            <h3>Commitment</h3>
+            <p>Delivering every project on time.</p>
+          </div>
+
+          <div>
+            <h3>Trust</h3>
+            <p>Building long-term client relationships.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+
+      <section className="team">
+        <h2>Meet Our Team</h2>
+
+        <div className="team-card">
+          <img src={About2} alt=" about2-img" />
+
+          <h3>Creative Team</h3>
+
+          <p>
+            Our experienced designers, engineers and production experts work
+            together to create exceptional exhibition experiences.
+          </p>
+        </div>
+      </section>
+
+      {/* Client Section */}
+
+      <section className="clients">
+        <h2>Our Trusted Clients</h2>
+
+        <div className="client-logo">
+          <div>Client 1</div>
+          <div>Client 2</div>
+          <div>Client 3</div>
+          <div>Client 4</div>
+        </div>
+      </section>
+
+      {/* Project Gallery Preview */}
+
+      <section className="gallery">
+        <h2>Our Recent Work</h2>
+
+        <div className="gallery-grid">
+          <img src={work1} />
+          <img src={work2} />
+          <img src={work3} />
+        </div>
+
+        <button>View All Projects</button>
       </section>
 
       {/* CTA */}
 
       <section className="cta">
-
         <h2>Let's Build Something Amazing Together</h2>
 
         <p>
@@ -139,7 +328,6 @@ const About = () => {
         </p>
 
         <button>Get Free Quote</button>
-
       </section>
     </>
   );

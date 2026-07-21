@@ -12,6 +12,7 @@ import Urban from "./assets/Pages/Urban";
 import BookNow from "./assets/Pages/BookNow";
 import Footer from "./Component/Footer";
 import ScrollTop from "./Component/ScrollTop";
+import Loan from "./Component/Loan";
 
 const App = () => {
   return (
@@ -35,6 +36,8 @@ const App = () => {
         <Route path="/testimonial" element={<Testimonial />} />
 
         <Route path="/booknow" element={<BookNow />} />
+
+        <Route path="/loan" element={<Loan />} />
 
         <Route path="/contact" element={<Contact />} />
       </Routes>
