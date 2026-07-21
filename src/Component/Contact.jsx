@@ -1,14 +1,25 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+
+
+  const navigate = useNavigate();
+
   return (
     <section className="contact-section">
 
+      {/* Heading */}
+
       <div className="contact-heading">
-        <h2>Contact Us</h2>
+        <span className="contact-tag">Get In Touch</span>
+
+        <h2>Let's Discuss Your Dream Property</h2>
+
         <p>
-          We'd love to hear from you. Fill out the form and our team will
-          contact you shortly.
+          Have questions about our plots or projects? Fill out the form below
+          and our team will contact you shortly with the best investment
+          options.
         </p>
       </div>
 
@@ -16,31 +27,33 @@ const Contact = () => {
 
         {/* Left Side */}
 
-        <div className="contact-form">
+        <div className="contact-form-box">
 
           <h3>Send Your Inquiry</h3>
 
-          <form>
+          <form className="contact-form">
 
-            <input type="text" placeholder="Full Name" />
+            <div className="input-group">
+              <input type="text" placeholder="Full Name" required />
+              <input type="email" placeholder="Email Address" required />
+            </div>
 
-            <input type="email" placeholder="Email Address" />
-
-            <input type="tel" placeholder="Phone Number" />
-
-            <input type="text" placeholder="City" />
+            <div className="input-group">
+              <input type="tel" placeholder="Phone Number" required />
+              <input type="text" placeholder="City" />
+            </div>
 
             <select>
               <option>Select Property</option>
-              <option>Residential Plot</option>
+              <option>Rural Area Plot</option>
+              <option>Urban Area Plot</option>
               <option>Commercial Plot</option>
-              <option>Farm House</option>
-              <option>Villa</option>
+              <option>Farm Land</option>
             </select>
 
             <textarea
-              rows="6"
-              placeholder="Write Your Message"
+              rows="5"
+              placeholder="Write Your Message..."
             ></textarea>
 
             <button type="submit">
@@ -53,67 +66,66 @@ const Contact = () => {
 
         {/* Right Side */}
 
-        <div className="contact-info">
+        <div className="contact-right">
 
-          <div className="info-box">
+          <div className="contact-card">
 
-            <i className="ri-phone-fill"></i>
+            <div className="icon">
+              <i className="ri-phone-fill"></i>
+            </div>
 
-            <div>
+            <div className="text">
               <h4>Call Us</h4>
-              <p>+91 9876543210</p>
+              <p>+91 98765 43210</p>
             </div>
 
           </div>
 
-          <div className="info-box">
+          <div className="contact-card">
 
-            <i className="ri-whatsapp-fill"></i>
-
-            <div>
-              <h4>WhatsApp</h4>
-              <p>Chat with our sales team</p>
+            <div className="icon">
+              <i className="ri-mail-fill"></i>
             </div>
 
-          </div>
-
-          <div className="info-box">
-
-            <i className="ri-mail-fill"></i>
-
-            <div>
+            <div className="text">
               <h4>Email</h4>
-              <p>info@auctech.com</p>
+              <p>info@buildx.com</p>
             </div>
 
           </div>
 
-          <div className="info-box">
+          <div className="contact-card">
 
-            <i className="ri-map-pin-2-fill"></i>
+            <div className="icon">
+              <i className="ri-map-pin-2-fill"></i>
+            </div>
 
-            <div>
-              <h4>Office Address</h4>
+            <div className="text">
+              <h4>Office</h4>
               <p>Lucknow, Uttar Pradesh, India</p>
             </div>
 
           </div>
 
-          <div className="info-box">
+          <div className="contact-card">
 
-            <i className="ri-time-fill"></i>
+            <div className="icon">
+              <i className="ri-time-fill"></i>
+            </div>
 
-            <div>
+            <div className="text">
               <h4>Working Hours</h4>
-              <p>Mon - Sat : 9:00 AM - 7:00 PM</p>
+              <p>Mon - Sat : 9 AM - 7 PM</p>
             </div>
 
           </div>
 
+          {/* Map */}
+
           <div className="map-box">
 
             <iframe
-              title="map"
+              title="Google Map"
               src="https://www.google.com/maps?q=Lucknow&output=embed"
               loading="lazy"
             ></iframe>
@@ -123,6 +135,8 @@ const Contact = () => {
         </div>
 
       </div>
+
+      {/* Bottom CTA */}
 
     </section>
   );

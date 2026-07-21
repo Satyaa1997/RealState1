@@ -6,6 +6,7 @@ import slide2 from "../assets/slide2.jpg";
 import slide3 from "../assets/slide3.jpg";
 import slide5 from "../assets/slide5.jpg";
 import slide6 from "../assets/slide6.avif"
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const slides = [About2, slide1, slide2, slide3, slide5];
@@ -27,6 +28,8 @@ const Home = () => {
   const prevSlide = () => {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   };
+
+  const navigate = useNavigate();
   return (
     <>
       {/* Hero Slider */}
@@ -44,7 +47,7 @@ const Home = () => {
               Solutions.
             </p>
 
-            <button>Read More</button>
+            <button onClick={()=> navigate("/about")}>Read More</button>
           </div>
 
           <button className="prev" onClick={prevSlide}>
@@ -76,7 +79,7 @@ const Home = () => {
              Invest today and build a brighter tomorrow for your family.
           </p>
 
-          <button>Know More</button>
+          <button onClick={()=> navigate("/rural")}>Know More</button>
         </div>
       </section>
 
@@ -91,7 +94,7 @@ const Home = () => {
             Every plot is legally verified and comes with clear documentation for a secure purchase.
           </p>
 
-          <button>Know More</button>
+          <button onClick={()=> navigate("/urban")}>Know More</button>
         </div>
 
         <div className="left">

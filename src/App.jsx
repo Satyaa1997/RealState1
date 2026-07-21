@@ -1,24 +1,47 @@
-import React from 'react'
-import Navbar from './Component/Navbar'
-import Home from './Component/Home'
-import About from './Component/About'
-import Service from './Component/Service'
-import Project from './Component/Project'
-import Contact from './Component/Contact'
-import Testimonial from './Component/Testimonial'
+import React from "react";
+import Navbar from "./Component/Navbar";
+import Home from "./Component/Home";
+import About from "./Component/About";
+import Service from "./Component/Service";
+import Project from "./Component/Project";
+import Contact from "./Component/Contact";
+import Testimonial from "./Component/Testimonial";
+import { Routes, Route } from "react-router-dom";
+import Rural from "./assets/Pages/Rural";
+import Urban from "./assets/Pages/Urban";
+import BookNow from "./assets/Pages/BookNow";
+import Footer from "./Component/Footer";
+import ScrollTop from "./Component/ScrollTop";
 
 const App = () => {
   return (
     <div>
+      <ScrollTop/>
       <Navbar />
-      <Home/>
-      <About />
-      <Service />
-      <Project />
-      <Testimonial />
-      <Contact />
-    </div>
-  )
-}
 
-export default App
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/rural" element={<Rural />} />
+
+        <Route path="/urban" element={<Urban />} />
+
+        <Route path="/about" element={<About />} />
+
+        <Route path="/service" element={<Service />} />
+
+        <Route path="/project" element={<Project />} />
+
+        <Route path="/testimonial" element={<Testimonial />} />
+
+        <Route path="/booknow" element={<BookNow />} />
+
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default App;
