@@ -1,14 +1,12 @@
 import React from "react";
 
 import "./Service.css";
-import img5 from "../assets/gallery1.jpg";
-import img6 from "../assets/gallery2.jfif";
-import img7 from "../assets/gallery3.jfif";
-import img8 from "../assets/gallery4.jpg";
-import img9 from "../assets/gallery5.jfif";
-import img10 from "../assets/gallery6.jfif";
-import img11 from "../assets/gallery7.jfif";
-import img12 from "../assets/gallery8.jfif";
+import img5 from "../assets/gal1.jpg";
+import img6 from "../assets/gal2.jpg";
+import img7 from "../assets/gal3.jpg";
+import img8 from "../assets/gal4.jpg";
+import img9 from "../assets/gal5.jpg";
+import img10 from "../assets/gal6.jpg";
 
 const Service = () => {
   const services = [
@@ -40,8 +38,6 @@ const Service = () => {
     img8,
     img9,
     img10,
-    img11,
-    img12,
   ];
 
   return (

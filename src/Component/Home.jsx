@@ -3,13 +3,14 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Service from "./Service.jsx";
-import About2 from "../assets/About2.png";
-import gallery1 from "../assets/gallery2.jfif";
-import slide1 from "../assets/slide1.jpg";
-import slide2 from "../assets/overview2.webp";
-import slide3 from "../assets/slide3.jpg";
-import slide5 from "../assets/slide5.jpg";
-import slide6 from "../assets/slide6.avif";
+import About2 from "../assets/slide.jpg";
+import gallery1 from "../assets/slide6.jpg";
+import slide1 from "../assets/slide7.jpg";
+import slide2 from "../assets/slide8.jpg";
+import slide3 from "../assets/slide9.jpg";
+import slide5 from "../assets/slide10.jpg";
+import slide6 from "../assets/slide11.jpg";
+import over from "../assets/over.jpg"
 import { useNavigate } from "react-router-dom";
 
 import samsung from "../assets/logo9.png";
@@ -54,13 +55,17 @@ const Home = () => {
             <h1>
               Build X Events & <span className="Exhibition">Exhibition</span>
             </h1>
-
             <p>
-              We Design, Build and Deliver World Class Exhibition Stands & Event
-              Solutions.
+             Build X Events & Exhibition is a leading exhibition stand design, event production, and custom fabrication company based in Dubai, UAE.
+            </p>
+            <p>
+             We transform creative ideas into impactful brand experiences through innovative design, precision engineering, and high-quality manufacturing.
+            </p>
+            <p>
+             From concept development to installation, our experienced team delivers end-to-end solutions tailored to every client's unique requirements.
             </p>
 
-            <button onClick={() => navigate("/about")}>Get Free Quots</button>
+            <button onClick={() => navigate("/contact")}> Get Free Quote</button>
           </div>
 
           <button className="prev" onClick={prevSlide}>
@@ -77,7 +82,7 @@ const Home = () => {
 
       <section className="home-content">
         <div className="left">
-          <img src={slide2} alt="slide2" />
+          <img src={over} alt="overview" />
         </div>
 
         <div className="right">

@@ -39,10 +39,11 @@
 }
 
 .overlay p{
-    margin:20px 0;
+    margin:5px 0;
     max-width:700px;
     line-height:30px;
     font-size:18px;
+    color: #fff;
 }
 
 .overlay button{
