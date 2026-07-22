@@ -210,25 +210,6 @@ button:hover {
   margin: 20px 0;
 }
 
-/* ================================
-   WHY CHOOSE
-================================ */
-
-.why {
-  padding: 100px 8%;
-
-  text-align: center;
-}
-
-.why-box {
-  margin-top: 50px;
-
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 30px;
-}
 
 /* ================================
    JOURNEY
