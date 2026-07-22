@@ -1,12 +1,14 @@
 import React from "react";
 import "./Loan.css";
-
+import { useNavigate } from "react-router-dom";
 import hdfc from "../assets/hdfc.jfif";
 import sbi from "../assets/sbi.jfif";
 import bob from "../assets/bajaj.jfif";
 import canara from "../assets/canara.jfif";
 
 const Loan = () => {
+
+  const navigate = useNavigate()
 
   const banks = [
     {
@@ -235,7 +237,7 @@ const Loan = () => {
           Contact our loan experts today and get the best deal.
         </p>
 
-        <button>Apply Now</button>
+        <button onClick={()=> navigate("/contact")}>Apply Now</button>
 
       </section>
 
