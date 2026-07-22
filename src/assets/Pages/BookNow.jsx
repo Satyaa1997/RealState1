@@ -1,7 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import "./BookNow.css";
 
 const BookNow = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    date: "",
+    time: "",
+    property: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (
+      !formData.name ||
+      !formData.phone ||
+      !formData.email ||
+      !formData.date ||
+      !formData.time ||
+      !formData.property ||
+      !formData.message
+    ) {
+      alert("Please fill all fields.");
+      return;
+    }
+
+    alert("🎉 Thank You! Your Site Visit has been booked successfully.");
+
+    setFormData({
+      name: "",
+      phone: "",
+      email: "",
+      date: "",
+      time: "",
+      property: "",
+      message: "",
+    });
+  };
+
   return (
     <section className="visit-section">
       <div className="visit-heading">
@@ -41,30 +87,88 @@ const BookNow = () => {
         </div>
       </div>
 
-      <form className="visit-form">
-        <input type="text" placeholder="Full Name" />
+      <form className="visit-form" onSubmit={handleSubmit}>
+        {/* Name */}
+        <input
+          type="text"
+          name="name"
+          placeholder="Full Name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          minLength={3}
+          maxLength={50}
+          pattern="[A-Za-z ]+"
+          title="Only alphabets are allowed."
+        />
 
-        <input type="tel" placeholder="Phone Number" />
+        {/* Phone */}
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          pattern="[6-9]{1}[0-9]{9}"
+          maxLength="10"
+          title="Enter a valid 10-digit mobile number."
+        />
 
-        <input type="email" placeholder="Email Address" />
+        {/* Email */}
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
 
-        <input type="date" />
+        {/* Date */}
+        <input
+          type="date"
+          name="date"
+          value={formData.date}
+          onChange={handleChange}
+          required
+        />
 
-        <input type="time" />
+        {/* Time */}
+        <input
+          type="time"
+          name="time"
+          value={formData.time}
+          onChange={handleChange}
+          required
+        />
 
-        <select>
-          <option>Select Property</option>
-
+        {/* Property */}
+        <select
+          name="property"
+          value={formData.property}
+          onChange={handleChange}
+          required
+        >
+          <option value="">Select Property</option>
           <option>Rural Area Plot</option>
-
           <option>Urban Area Plot</option>
-
           <option>Commercial Plot</option>
         </select>
 
-        <textarea rows="5" placeholder="Write Your Message..."></textarea>
+        {/* Message */}
+        <textarea
+          rows="5"
+          name="message"
+          placeholder="Write Your Message..."
+          value={formData.message}
+          onChange={handleChange}
+          required
+          minLength={10}
+          maxLength={300}
+        ></textarea>
 
-        <button>Schedule Site Visit →</button>
+        <button type="submit">Schedule Site Visit →</button>
       </form>
     </section>
   );

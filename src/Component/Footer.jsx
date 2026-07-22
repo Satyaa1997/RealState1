@@ -61,7 +61,7 @@ const Footer = () => {
 
          <Link to="/testimonial">Testimonials</Link>
 
-         <Link to="/project">Blogs</Link>
+         <Link to="/blog">Blogs</Link>
 
     </div>
 
@@ -131,13 +131,13 @@ const Footer = () => {
 
           <h4>Resources</h4>
 
-              <Link to="/emi-calculator">EMI Calculator</Link>
+              <Link to="/emi">EMI Calculator</Link>
 
                <Link to="/loan">Home Loan</Link> 
 
               <Link to="/property-guide">Property Guide</Link>
 
-              <Link to="/latest-news">Latest News</Link>
+              <Link to="/blog">Latest News</Link>
 
         </div>
 

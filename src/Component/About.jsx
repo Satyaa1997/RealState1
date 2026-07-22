@@ -3,9 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./About.css";
 import aboutImg from "../assets/aboutImg.jpg";
 import personimg from "../assets/personimg.webp";
-import work1 from "../assets/work1.webp";
-import work2 from "../assets/work2.jpg";
-import work3 from "../assets/work3.jpg";
 import client1 from "../assets/client1.png";
 import client2 from "../assets/client2.jfif";
 import client3 from "../assets/client3.png";
@@ -24,6 +21,9 @@ const About = () => {
       <section className="about-banner">
         <div className="banner-overlay">
           <h1>About Us</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, delectus.</p>
+           <p>Lorem ipsum dolor elit. Nobis, delectus.</p>
+           
         </div>
       </section>
 
@@ -334,30 +334,6 @@ const About = () => {
             fabrication projects crafted with creativity and precision.
           </p>
         </div>
-
-        <div className="gallery-grid">
-          <div className="gallery-card">
-            <img src={work1} alt="" />
-            <div className="gallery-overlay">
-              <h3>Exhibition Stall</h3>
-            </div>
-          </div>
-
-          <div className="gallery-card">
-            <img src={work2} alt="" />
-            <div className="gallery-overlay">
-              <h3>Corporate Event</h3>
-            </div>
-          </div>
-
-          <div className="gallery-card">
-            <img src={work3} alt="" />
-            <div className="gallery-overlay">
-              <h3>Premium Booth</h3>
-            </div>
-          </div>
-        </div>
-
         <div className="gallery-btn">
           <button onClick={() => navigate("/project")}>
             View All Projects
@@ -381,3 +357,5 @@ const About = () => {
 };
 
 export default About;
+
+

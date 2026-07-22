@@ -14,6 +14,8 @@ import Footer from "./Component/Footer";
 import ScrollTop from "./Component/ScrollTop";
 import Loan from "./Component/Loan";
 import ProjectDetail from "./Component/ProjectDetail";
+import Emi from "./assets/Pages/Emi";
+import Blog from "./assets/Pages/Blog";
 
 const App = () => {
   return (
@@ -43,6 +45,11 @@ const App = () => {
         <Route path="/loan" element={<Loan />} />
 
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="/blog" element={<Blog />} />
+
+        <Route path="/emi" element={<Emi />} />
+
       </Routes>
 
       <Footer />
