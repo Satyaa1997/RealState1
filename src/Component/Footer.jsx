@@ -65,21 +65,6 @@ const Footer = () => {
 
     </div>
 
-        <div className="footer-column">
-
-          <h4>Properties</h4>
-
-           <Link to="/residential-plots">Residential Plots</Link>
-
-           <Link to="/commercial-plots">Commercial Plots</Link>
-
-           <Link to="/farm-house">Farm House</Link>
-
-           <Link to="/luxury-villas">Luxury Villas</Link>
-
-           <Link to="/apartments">Apartments</Link>
-
-        </div>
 
         <div className="footer-column">
 

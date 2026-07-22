@@ -16,6 +16,7 @@ import Loan from "./Component/Loan";
 import ProjectDetail from "./Component/ProjectDetail";
 import Emi from "./assets/Pages/Emi";
 import Blog from "./assets/Pages/Blog";
+import CorporatePage1 from "./Component/CorporatePage1";
 
 const App = () => {
   return (
@@ -47,6 +48,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/blog" element={<Blog />} />
+
+        <Route path="/corporatepage1" element={<CorporatePage1 />} />
 
         <Route path="/emi" element={<Emi />} />
 
