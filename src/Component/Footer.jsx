@@ -94,6 +94,8 @@ const Footer = () => {
 
            <Link to="/contact">Contact</Link>
 
+           <Link to="/contact">Carrer</Link>
+
            <Link to="/faq">FAQ</Link>
 
         </div>
