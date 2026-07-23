@@ -49,7 +49,7 @@
 .overlay button{
     padding:14px 35px;
     border:none;
-    background:#00bfff;
+    background:rgba(0,0,0,0.6);
     color:#fff;
     font-size:17px;
     border-radius:5px;
@@ -60,7 +60,7 @@
 .next{
     position:absolute;
     top:50%;
-    transform:translateY(-50%);
+    transform:translateY(-5%);
     width:50px;
     height:50px;
     border:none;
@@ -177,13 +177,13 @@
 ================================ */
 
 .why {
-  padding: 100px 8%;
+  padding: 80px 8%;
 
   text-align: center;
 }
 
 .why-box {
-  margin-top: 50px;
+  margin-top: 30px;
 
   display: grid;
 
@@ -195,11 +195,52 @@
    Process Section
 =========================== */
 
-.process {
-  padding: 80px 8%;
-  background: #f8f9fb;
+.process{
+    position: relative;
+
+    padding:120px 8%;
+
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+    overflow:hidden;
+}
+.process::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    z-index:1;
+}
+.process-heading,
+.process-timeline{
+    position:relative;
+    z-index:2;
+}
+.process-heading h2{
+    color: #fff;
 }
 
+.process-heading p{
+    color: #fff;
+}
+
+.process-step h4{
+    color: #fff;
+}
+
+.arrow{
+    color: #fff;
+}
+
+.circle{
+    color: #fff;
+}
 .process-heading {
   text-align: center;
   margin-bottom: 60px;
@@ -207,14 +248,14 @@
 
 .process-heading h2 {
   font-size: 40px;
-  color: #111;
+  color: #fff;
   margin-bottom: 15px;
 }
 
 .process-heading p {
   max-width: 700px;
   margin: auto;
-  color: #666;
+  color: #fff;
   line-height: 1.8;
 }
 
@@ -231,8 +272,8 @@
 }
 
 .circle {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: #0d6efd;
   color: #fff;
@@ -253,7 +294,7 @@
 .process-step h4 {
   margin-top: 15px;
   font-size: 18px;
-  color: #222;
+  color: #fff;
 }
 
 .arrow {
@@ -263,20 +304,46 @@
 }
 
 /* Mobile */
+@media (max-width:768px){
 
-@media (max-width: 768px) {
-
-  .process-timeline {
-    flex-direction: column;
+  .process{
+    padding:60px 10px;
   }
 
-  .arrow {
-    transform: rotate(0deg);
-    font-size: 28px;
+  .process-timeline{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:nowrap;
+    gap:0;
+    overflow:hidden;   /* scroll hata diya */
   }
 
-  .process-heading h2 {
-    font-size: 32px;
+  .process-step{
+    width:30px;
+    flex:0 0 38px;
+    text-align:center;
+  }
+
+  .circle{
+    width:28px;
+    height:28px;
+    font-size:15px;
+    margin:0 auto;
+  }
+
+  .process-step h4{
+    font-size:10px;
+    line-height:10px;
+    margin-top:4px;
+    white-space:normal;
+  }
+
+  .arrow{
+    width:10px;
+    font-size:12px;
+    margin-top:8px;
+    flex:0 0 10px;
   }
 
 }
@@ -285,7 +352,7 @@
 =========================== */
 
 .featured-projects{
-    padding:100px 8%;
+    padding:80px 8%;
     background:#f7f7f7;
 }
 
@@ -319,9 +386,9 @@
     position:relative;
     overflow:hidden;
     border-radius:18px;
-    height:420px;
+    height:400px;
     text-decoration:none;
-    box-shadow:0 15px 40px rgba(0,0,0,.12);
+    box-shadow:0 15px 40px rgba(0,0,0,1);
     transition:.4s;
 }
 
@@ -358,8 +425,8 @@
 
 .project-overlay{
     position:absolute;
-    left:25px;
-    right:25px;
+    left:20px;
+    right:20px;
     bottom:25px;
     z-index:2;
 
@@ -373,13 +440,13 @@
     border:1px solid rgba(255,255,255,.25);
     border-radius:14px;
 
-    padding:18px 22px;
+    padding:5px 5px;
 
-    transition:.4s;
+    transition:.3s;
 }
 
 .project-card:hover .project-overlay{
-    bottom:35px;
+    bottom:30px;
 }
 
 .project-overlay h3{
@@ -405,7 +472,7 @@
     justify-content:center;
     align-items:center;
 
-    font-size:24px;
+    font-size:20px;
 
     transition:.35s;
 }
@@ -415,7 +482,7 @@
     background:#0d6efd;
     color:#fff;
 
-    transform:rotate(-45deg);
+    transform:rotate(-5deg);
 
 }
 
@@ -507,7 +574,7 @@ font-size:20px;
 
 .clients{
     padding:80px 5%;
-    background:#f8f9fb;
+    background:#204da8;
     overflow:hidden;
 }
 

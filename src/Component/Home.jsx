@@ -12,6 +12,7 @@ import slide5 from "../assets/slide10.jpg";
 import slide6 from "../assets/slide11.jpg";
 import over from "../assets/over.jpg"
 import { useNavigate } from "react-router-dom";
+import process from "../assets/process.jpg"
 
 import samsung from "../assets/logo9.png";
 import etisalat from "../assets/logo8.png";
@@ -120,6 +121,9 @@ const Home = () => {
           <img src={slide6} alt="slide6" />
         </div>
       </section>
+      
+{/* our  Service    */}
+
       <Service />
 
       {/* Why Choose */}
@@ -178,7 +182,11 @@ const Home = () => {
 
       {/* Process Section */}
 
-      <section className="process">
+      <section className="process"
+        style={{
+              backgroundImage: `url(${process})`,
+             }}
+        >
         <div className="process-heading">
           <h2>Our Process</h2>
           <p>
@@ -259,7 +267,7 @@ const Home = () => {
             <img src={gallery1} alt="Trade Show Booth" />
 
             <div className="project-overlay">
-              <h3>Corporate Exhibition</h3>
+              <h3>Team Exhibition</h3>
 
               <span>
                 <i className="ri-arrow-right-up-line"></i>
@@ -271,7 +279,7 @@ const Home = () => {
             <img src={slide6} alt="Luxury Event" />
 
             <div className="project-overlay">
-              <h3>Corporate Exhibition</h3>
+              <h3>On Site Exhibition</h3>
 
               <span>
                 <i className="ri-arrow-right-up-line"></i>

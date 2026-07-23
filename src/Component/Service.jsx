@@ -13,7 +13,7 @@ const Service = () => {
   {
     title: "EXIBITION STANDS",
     icon: "ri-building-4-fill",
-    desc: "Creative exhibition stall designing and fabrication with premium quality materials."
+    desc: "Creative exhibition stall designing and fabrication with quality materials."
   },
   {
     title: "FABRICATION WORK",
