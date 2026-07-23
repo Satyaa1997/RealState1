@@ -715,6 +715,10 @@ grid-template-columns:repeat(2,1fr);
   .counter {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .mission {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -733,5 +737,74 @@ grid-template-columns:repeat(2,1fr);
 
   .counter h2 {
     font-size: 40px;
+  }
+  .values-box {
+  grid-template-columns: 1fr;
+}
+
+.expertise-box {
+  grid-template-columns: 1fr;
+}
+
+.why-box {
+  grid-template-columns: 1fr;
+}
+
+.counter {
+  grid-template-columns: 1fr;
+}
+}
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+
+  .mission {
+    grid-template-columns: 1fr;
+    padding: 50px 5%;
+    gap: 20px;
+  }
+
+  .mission-box {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .mission-box h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .mission-box p {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .values-box {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-box {
+    grid-template-columns: 1fr;
+  }
+
+  .why-box {
+    grid-template-columns: 1fr;
+  }
+
+  .counter {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    width: 100%;
+  }
+
+  .company {
+    flex-direction: column;
+  }
+
+  .company-image img {
+    height: 280px;
   }
 }
