@@ -233,13 +233,19 @@
 .process {
   position: relative;
 
+  min-height: 100vh;   /* ya 800px */
+
   padding: 120px 8%;
 
-  background-size: contain;
+  background-image: inherit;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   overflow: hidden;
 }
