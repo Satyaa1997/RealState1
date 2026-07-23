@@ -160,8 +160,7 @@ const Home = () => {
             <h4>Our Team</h4>
 
             <p>
-              Our dedicated team of experienced professionals delivers
-              innovative solutions with precision and excellence.
+              Our dedicated team of experienced professionals and excellence.
             </p>
           </div>
 
@@ -173,8 +172,7 @@ const Home = () => {
             <h4>Factory Capability</h4>
 
             <p>
-              State-of-the-art factory with advanced machinery and strict
-              quality control processes.
+              State-of-the-art factory with advanced machinery.
             </p>
           </div>
         </div>

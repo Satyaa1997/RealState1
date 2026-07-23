@@ -191,6 +191,41 @@
 
   gap: 30px;
 }
+.card{
+    background:#fff;
+    padding:30px 20px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    min-height:260px;   /* sab card same height */
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    font-size:40px;
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.card h4{
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.card p{
+    text-align:center;
+    line-height:26px;
+    color:#666;
+}
 /* ===========================
    Process Section
 =========================== */
