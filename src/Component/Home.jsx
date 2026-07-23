@@ -10,9 +10,9 @@ import slide2 from "../assets/slide8.jpg";
 import slide3 from "../assets/slide9.jpg";
 import slide5 from "../assets/slide10.jpg";
 import slide6 from "../assets/slide11.jpg";
-import over from "../assets/over.jpg"
+import over from "../assets/over.jpg";
 import { useNavigate } from "react-router-dom";
-import process from "../assets/process.jpg"
+import process from "../assets/process.jpg";
 
 import samsung from "../assets/logo9.png";
 import etisalat from "../assets/logo8.png";
@@ -21,8 +21,10 @@ import dewa from "../assets/logo6.jfif";
 import expo from "../assets/logo5.jpg";
 import damac from "../assets/logo4.webp";
 
+const slides = [About2, slide1, slide2, slide3, slide5];
+
 const Home = () => {
-  const slides = [About2, slide1, slide2, slide3, slide5];
+ 
 
   const [current, setCurrent] = useState(0);
 
@@ -32,7 +34,7 @@ const Home = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  },[]);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
@@ -57,16 +59,22 @@ const Home = () => {
               Build X Events & <span className="Exhibition">Exhibition</span>
             </h1>
             <p>
-             Build X Events & Exhibition is a leading exhibition stand design, event productionsed in Dubai, UAE.
+              Build X Events & Exhibition is a leading exhibition stand design,
+              event productionsed in Dubai, UAE.
             </p>
             <p>
-             We transform creative ideas into impactful brand experiences manufacturing.
+              We transform creative ideas into impactful brand experiences
+              manufacturing.
             </p>
             <p>
-             From concept development to installation, our experienced  client's unique requirements.
+              From concept development to installation, our experienced client's
+              unique requirements.
             </p>
 
-            <button onClick={() => navigate("/contact")}> Get Free Quote</button>
+            <button onClick={() => navigate("/contact")}>
+              {" "}
+              Get Free Quote
+            </button>
           </div>
 
           <button className="prev" onClick={prevSlide}>
@@ -121,8 +129,8 @@ const Home = () => {
           <img src={slide6} alt="slide6" />
         </div>
       </section>
-      
-{/* our  Service    */}
+
+      {/* our  Service    */}
 
       <Service />
 
@@ -171,20 +179,19 @@ const Home = () => {
 
             <h4>Factory Capability</h4>
 
-            <p>
-              State-of-the-art factory with advanced machinery.
-            </p>
+            <p>State-of-the-art factory with advanced machinery.</p>
           </div>
         </div>
       </section>
 
       {/* Process Section */}
 
-      <section className="process"
+      <section
+        className="process"
         style={{
-              backgroundImage: `url(${process})`,
-             }}
-        >
+          backgroundImage: `url(${process})`,
+        }}
+      >
         <div className="process-heading">
           <h2>Our Process</h2>
           <p>
