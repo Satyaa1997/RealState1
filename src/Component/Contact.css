@@ -7,7 +7,7 @@
 .contact-section{
     width:100%;
     padding:70px 7%;
-    background:linear-gradient(135deg,#eef6ff,#ffffff);
+    background:linear-gradient(135deg,#adafb1,#f5f0f0);
 }
 
 /*=====================================
@@ -339,7 +339,7 @@ font-size:30px;
 
 .contact-heading p{
 
-font-size:15px;
+font-size:1px;
 
 line-height:26px;
 

@@ -6,8 +6,8 @@
 
 .rural-banner{
     width:100%;
-    height:70vh;
-    background:url("./assets/rural-banner2.png") center/cover no-repeat;
+    height:90vh;
+    background:url("../rural-banner2.jpg") center/cover no-repeat;
     position:relative;
 }
 
@@ -36,6 +36,7 @@
 .banner-content p{
     font-size:22px;
     letter-spacing:1px;
+    color: #fff;
 }
 
 
@@ -76,14 +77,14 @@
 }
 
 .rural-text h2{
-    font-size:45px;
-    margin:20px 0;
+    font-size:30px;
+    margin:15px 0;
     color:#123;
 }
 
 .rural-text p{
     color:#666;
-    line-height:32px;
+    line-height:20px;
     margin-bottom:20px;
 }
 
@@ -94,13 +95,13 @@
 
 .rural-gallery{
     width:90%;
-    margin:80px auto;
+    margin:20px auto;
 }
 
 .rural-gallery h2{
     text-align:center;
     font-size:42px;
-    margin-bottom:45px;
+    margin-bottom:0px;
 }
 
 .gallery{
@@ -111,7 +112,7 @@
 
 .gallery img{
     width:100%;
-    height:280px;
+    height:250px;
     object-fit:cover;
     border-radius:15px;
     transition:.4s;
@@ -130,13 +131,13 @@
 
 .benefits{
     background:#f8f9fa;
-    padding:90px 8%;
+    padding:50px 8%;
 }
 
 .benefits h2{
     text-align:center;
-    font-size:42px;
-    margin-bottom:50px;
+    font-size:30px;
+    margin-bottom:20px;
 }
 
 .benefit-grid{
@@ -179,7 +180,7 @@
 
 .article{
     width:90%;
-    margin:90px auto;
+    margin:50px auto;
     display:flex;
     align-items:center;
     gap:60px;
@@ -190,14 +191,14 @@
 }
 
 .article-left h2{
-    font-size:42px;
+    font-size:30px;
     margin-bottom:20px;
 }
 
 .article-left p{
     color:#666;
-    line-height:32px;
-    margin-bottom:20px;
+    line-height:22px;
+    margin-bottom:10px;
 }
 
 .article-right{
@@ -219,6 +220,41 @@
         CTA
 =========================== */
 
+.contact-bottom{
+    background: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+}
+.contact-bottom h2{
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.contact-bottom p{
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 30px;
+    color: black;
+}
+.contact-bottom button{
+    padding: 14px 35px;
+    border: none;
+    border-radius: 5px;
+    background: #58b7f7;
+    color: #0b0b0c;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.contact-bottom button:hover{
+    background: #000;
+    color: #fff;
+}
 .rural-cta{
     background:linear-gradient(135deg,#009688,#00b894);
     color:#fff;
@@ -228,6 +264,7 @@
 
 .rural-cta h2{
     font-size:45px;
+    color: #fff;
     margin-bottom:20px;
 }
 
@@ -250,6 +287,27 @@
 .rural-cta button:hover{
     background:#123;
     color:#fff;
+}
+@media (max-width:768px){
+
+    .contact-bottom{
+        padding: 60px 20px;
+    }
+
+    .contact-bottom h2{
+        font-size: 30px;
+    }
+
+    .contact-bottom p{
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    .contact-bottom button{
+        width: 100%;
+        max-width: 240px;
+    }
+
 }
 
 

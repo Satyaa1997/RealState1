@@ -1,10 +1,32 @@
 
 /*-----------------------------------Book Now------------------------------------------*/
 .visit-section{
-    width:90%;
-    margin:100px auto;
+    width:100%;
+    min-height:100vh;
+    padding:80px 8%;
+    position:relative;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.visit-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
 }
 
+.visit-heading,
+.visit-top,
+.visit-form{
+    position:relative;
+    z-index:2;
+}
 .visit-heading{
     text-align:center;
     margin-bottom:50px;
@@ -17,14 +39,15 @@
 }
 
 .visit-heading h2{
-    font-size:42px;
+    color:#fff;
+    font-size:45px;
     margin:15px 0;
 }
 
 .visit-heading p{
     width:60%;
     margin:auto;
-    color:#666;
+    color:#fff;
     line-height:30px;
 }
 
@@ -36,47 +59,82 @@
 }
 
 .visit-box{
-    background:#fff;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.25);
+
     text-align:center;
-    padding:30px;
+    padding:20px;
     border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.4s;
+
+    color:#fff;
+
     cursor:pointer;
+    transition:.4s;
     font-size:40px;
 }
 
 .visit-box:hover{
+    background:rgba(0,183,255,.35);
     transform:translateY(-10px);
-    background:#00b7ff;
-    color:white;
 }
 
 .visit-box h4{
-    font-size:20px;
-    margin:15px 0;
+    color:#fff;
+    font-size: 25px;
 }
 
 .visit-box p{
-    font-size:15px;
+    color:#eee;
 }
-
 .visit-form{
-    background:#fff;
-    padding:40px;
+
+    width:80%;
+    margin:auto;
+
+    background:rgba(0,0,0,.4);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.25);
+
     border-radius:20px;
+
+    padding:40px;
+
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+    box-shadow:0 10px 35px rgba(0,0,0,.4);
 }
 
 .visit-form input,
-.visit-form select{
+.visit-form select,
+.visit-form textarea{
+
+    background:rgba(255,255,255,.02);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    color:#fff;
+
     padding:15px;
-    border:1px solid #ddd;
+
     border-radius:8px;
+
     outline:none;
+}
+.visit-form input::placeholder,
+.visit-form textarea::placeholder{
+    color:#ddd;
+}
+
+.visit-form select option{
+    color:#000;
 }
 
 .visit-form textarea{

@@ -6,8 +6,8 @@
 
 .urban-banner{
     width:100%;
-    height:70vh;
-    background:url("./assets/urban-banner.png") center/cover no-repeat;
+    height:90vh;
+    background:url("../urban-banner.jpg") center/cover no-repeat;
     position:relative;
 }
 
@@ -35,6 +35,7 @@
 
 .urban-banner-content p{
     font-size:22px;
+    color: #fff;
 }
 
 
@@ -75,15 +76,15 @@
 }
 
 .urban-content h2{
-    font-size:45px;
+    font-size:30px;
     margin:20px 0;
     color:#1d3557;
 }
 
 .urban-content p{
     color:#666;
-    line-height:32px;
-    margin-bottom:18px;
+    line-height:20px;
+    margin-bottom:14px;
 }
 
 
@@ -93,13 +94,13 @@
 
 .urban-gallery{
     width:90%;
-    margin:80px auto;
+    margin:70px auto;
 }
 
 .urban-gallery h2{
     text-align:center;
-    font-size:42px;
-    margin-bottom:45px;
+    font-size:35px;
+    margin-bottom:35px;
 }
 
 .urban-gallery-grid{
@@ -129,13 +130,13 @@
 
 .urban-benefits{
     background:#f5f8fc;
-    padding:90px 8%;
+    padding:70px 8%;
 }
 
 .urban-benefits h2{
     text-align:center;
-    font-size:42px;
-    margin-bottom:50px;
+    font-size:32px;
+    margin-bottom:30px;
 }
 
 .urban-benefit-grid{
@@ -147,7 +148,7 @@
 .urban-card{
     background:#fff;
     text-align:center;
-    padding:35px;
+    padding:25px;
     border-radius:15px;
     font-size:40px;
     transition:.4s;
@@ -161,13 +162,13 @@
 }
 
 .urban-card h3{
-    font-size:24px;
+    font-size:20px;
     margin:18px 0;
 }
 
 .urban-card p{
     font-size:16px;
-    line-height:28px;
+    line-height:20px;
     color:#666;
 }
 
@@ -178,7 +179,7 @@
 
 .urban-article{
     width:90%;
-    margin:90px auto;
+    margin:70px auto;
     display:flex;
     align-items:center;
     gap:60px;
@@ -189,13 +190,14 @@
 }
 
 .urban-article-left h2{
-    font-size:42px;
+    font-size:32px;
     margin-bottom:20px;
 }
 
 .urban-article-left p{
     color:#666;
-    line-height:32px;
+    font-size: 16px;
+    line-height:25px;
     margin-bottom:18px;
 }
 
@@ -220,13 +222,14 @@
 
 .urban-features{
     background:#fff;
-    padding:90px 8%;
+    padding:70px 4%;
+
 }
 
 .urban-features h2{
     text-align:center;
-    font-size:42px;
-    margin-bottom:50px;
+    font-size:35px;
+    margin-bottom:30px;
 }
 
 .urban-feature-grid{
@@ -238,10 +241,10 @@
 .feature-box{
     background:#0077ff;
     color:#fff;
-    padding:30px;
+    padding:28px;
     text-align:center;
     border-radius:12px;
-    font-size:18px;
+    font-size:15px;
     font-weight:600;
     transition:.4s;
     cursor:pointer;
@@ -261,7 +264,7 @@
     background:linear-gradient(135deg,#0077ff,#009dff);
     color:#fff;
     text-align:center;
-    padding:90px 20px;
+    padding:70px 20px;
 }
 
 .urban-cta h2{

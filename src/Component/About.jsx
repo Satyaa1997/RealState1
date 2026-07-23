@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./About.css";
 import aboutImg from "../assets/aboutImg.jpg";
@@ -10,9 +11,65 @@ import client4 from "../assets/client4.webp";
 import client5 from "../assets/client5.jpg";
 
 const About = () => {
-  const clients = [client1, client2, client3, client4, client5];
+  const clientsLogos = [client1, client2, client3, client4, client5];
 
   const navigate = useNavigate();
+
+  const counterRef = useRef(null);
+
+const [startCount, setStartCount] = useState(false);
+
+const [years, setYears] = useState(0);
+const [projects, setProjects] = useState(0);
+const [clients, setClients] = useState(0);
+const [team, setTeam] = useState(0);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setStartCount(true);
+        observer.disconnect();
+      }
+    },
+    {
+      threshold: 0.4,
+    }
+  );
+
+  if (counterRef.current) {
+    observer.observe(counterRef.current);
+  }
+
+  return () => observer.disconnect();
+}, []);
+
+useEffect(() => {
+  if (!startCount) return;
+
+  const animate = (target, setter, duration = 2000) => {
+    let start = 0;
+
+    const increment = target / (duration / 20);
+
+    const timer = setInterval(() => {
+      start += increment;
+
+      if (start >= target) {
+        setter(target);
+        clearInterval(timer);
+      } else {
+        setter(Math.floor(start));
+      }
+    }, 20);
+  };
+
+  animate(15, setYears);
+  animate(500, setProjects);
+  animate(150, setClients);
+  animate(50, setTeam);
+
+}, [startCount]);
 
   return (
     <>
@@ -61,28 +118,35 @@ const About = () => {
           <button onClick={() => navigate("/contact")}>Contact Us</button>
         </div>
       </section>
+  {/* Mission Vision */}
 
-      {/* Counter */}
+      <section className="mission">
+        <div className="mission-box">
+          <h2>Our Mission</h2>
 
-      <section className="counter">
-        <div>
-          <h2>15+</h2>
-          <p>Years Experience</p>
+          <p>
+            Our mission is to help people find the perfect property with
+            complete trust and transparency. We are committed to providing
+            high-quality residential and commercial plots at the best locations
+            and affordable prices. Our goal is to make property buying simple,
+            secure, and hassle-free for every customer. We focus on honest
+            dealings, clear documentation, and excellent customer service. By
+            understanding our clients' needs, we deliver reliable real estate
+            solutions that create long-term value.
+          </p>
         </div>
 
-        <div>
-          <h2>500+</h2>
-          <p>Projects Completed</p>
-        </div>
+        <div className="mission-box">
+          <h2>Our Vision</h2>
 
-        <div>
-          <h2>150+</h2>
-          <p>Happy Clients</p>
-        </div>
-
-        <div>
-          <h2>50+</h2>
-          <p>Professional Team</p>
+          <p>
+            Our vision is to become one of the most trusted and respected real
+            estate companies by delivering exceptional value to our customers.
+            We aim to create modern, sustainable, and well-planned communities
+            that improve the quality of life. Through innovation, transparency,
+            and customer-focused services, we strive to make property ownership
+            simple and accessible for everyone.
+          </p>
         </div>
       </section>
 
@@ -218,41 +282,29 @@ const About = () => {
           </div>
         </div>
       </section>
+   {/* Counter */}
 
-      {/* Mission Vision */}
+    <section className="counter" ref={counterRef}>
+  <div>
+    <h2>{years}+</h2>
+    <p>Years Experience</p>
+  </div>
 
-      <section className="mission">
-        <div className="mission-box">
-          <h2>Our Mission</h2>
+  <div>
+    <h2>{projects}+</h2>
+    <p>Projects Completed</p>
+  </div>
 
-          <p>
-            Our mission is to help people find the perfect property with
-            complete trust and transparency. We are committed to providing
-            high-quality residential and commercial plots at the best locations
-            and affordable prices. Our goal is to make property buying simple,
-            secure, and hassle-free for every customer. We focus on honest
-            dealings, clear documentation, and excellent customer service. By
-            understanding our clients' needs, we deliver reliable real estate
-            solutions that create long-term value. We strive to build lasting
-            relationships through integrity, professionalism, and customer
-            satisfaction.
-          </p>
-        </div>
+  <div>
+    <h2>{clients}+</h2>
+    <p>Happy Clients</p>
+  </div>
 
-        <div className="mission-box">
-          <h2>Our Vision</h2>
-
-          <p>
-            Our vision is to become one of the most trusted and respected real
-            estate companies by delivering exceptional value to our customers.
-            We aim to create modern, sustainable, and well-planned communities
-            that improve the quality of life. Through innovation, transparency,
-            and customer-focused services, we strive to make property ownership
-            simple and accessible for everyone.
-          </p>
-        </div>
-      </section>
-
+  <div>
+    <h2>{team}+</h2>
+    <p>Professional Team</p>
+  </div>
+    </section>
       {/* Our Values */}
 
       <section className="values">
@@ -312,7 +364,7 @@ const About = () => {
 
         <div className="client-slider">
           <div className="client-track">
-            {[...clients, ...clients].map((logo, index) => (
+            {[...clientsLogos, ...clientsLogos].map((logo, index) => (
               <div className="client-card" key={index}>
                 <img src={logo} alt="Client Logo" />
               </div>
@@ -341,6 +393,8 @@ const About = () => {
           </button>
         </div>
       </section>
+
+    
       {/* CTA */}
 
       <section className="cta">

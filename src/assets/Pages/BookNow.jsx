@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./BookNow.css";
+import visit from "../../assets/visit.jpg"
 
 const BookNow = () => {
   const [formData, setFormData] = useState({
@@ -49,7 +50,9 @@ const BookNow = () => {
   };
 
   return (
-    <section className="visit-section">
+    <section  className="visit-section"
+       style={{ backgroundImage: `url(${visit})` }}
+       >
       <div className="visit-heading">
         <span>BOOK SITE VISIT</span>
 
