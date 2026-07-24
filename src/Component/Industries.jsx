@@ -8,7 +8,7 @@ import hospitality from "../assets/project5.jfif";
 import healthcare from "../assets/urban-banner.jpg";
 import education from "../assets/education.jpg";
 import museums from "../assets/meusium.jpg";
-import events from "../assets/event.jpg";
+import events from "../assets/over.jpg";
 
 const industries = [
   {

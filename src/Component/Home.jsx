@@ -6,7 +6,7 @@ import Service from "./Service.jsx";
 import About2 from "../assets/slide.jpg";
 import gallery1 from "../assets/slide6.jpg";
 import slide1 from "../assets/slide7.jpg";
-import slide2 from "../assets/slide8.jpg";
+import slide2 from "../assets/project-banner2.png";
 import slide3 from "../assets/slide9.jpg";
 import slide5 from "../assets/slide10.jpg";
 import slide6 from "../assets/slide11.jpg";
