@@ -1,5 +1,5 @@
 import React from "react";
-import "./industries.css";
+import "./Industries.css";
 
 import corporate from "../assets/project4.jfif";
 import government from "../assets/govimg.jpg";
