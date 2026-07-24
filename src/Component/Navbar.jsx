@@ -31,11 +31,37 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <li>
-          <Link to="/service" onClick={() => setMenuOpen(false)}>
-            Service
-          </Link>
-        </li>
+        <li className="dropdown">
+  <Link to="/service" onClick={() => setMenuOpen(false)}>
+    Service
+  </Link>
+
+  <ul className="dropdown-menu">
+    <li>
+      <Link to="/services/exhibition" onClick={() => setMenuOpen(false)}>
+        Exhibition Stands
+      </Link>
+    </li>
+
+    <li>
+      <Link to="/services/fabrication" onClick={() => setMenuOpen(false)}>
+        Fabrication Work
+      </Link>
+    </li>
+
+    <li>
+      <Link to="/services/stylefoam" onClick={() => setMenuOpen(false)}>
+        Stylefoam Arts
+      </Link>
+    </li>
+
+    <li>
+      <Link to="/services/technical" onClick={() => setMenuOpen(false)}>
+        Technical Services
+      </Link>
+    </li>
+  </ul>
+</li>
 
         <li>
           <Link to="/project" onClick={() => setMenuOpen(false)}>
