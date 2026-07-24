@@ -87,7 +87,7 @@
 
     border-radius:18px;
 
-    padding:25px 20px;
+    padding:35px 25px;
 
     text-align:center;
 
@@ -186,7 +186,7 @@
 .gallery-card img{
     width:100%;
     height:260px;
-    object-fit:cover;
+    object-fit:contain;
     transition:.5s;
 }
 

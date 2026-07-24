@@ -177,11 +177,16 @@
 }
 
 }
+@media (max-width:768px){
 
-@media(max-width:768px){
+.visit-section{
+    min-height:auto;
+    padding:60px 20px;
 
-.visit-top{
-    grid-template-columns:1fr;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-attachment:scroll;   /* Mobile me fixed background hata do */
 }
 
 .visit-heading h2{
@@ -190,10 +195,23 @@
 
 .visit-heading p{
     width:100%;
+    font-size:15px;
+    line-height:26px;
+}
+
+.visit-top{
+    grid-template-columns:1fr;
 }
 
 .visit-form{
-    padding:25px;
+    width:100%;
+    padding:20px;
+    grid-template-columns:1fr;
+}
+
+.visit-form textarea,
+.visit-form button{
+    grid-column:auto;
 }
 
 }
