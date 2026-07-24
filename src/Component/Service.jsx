@@ -31,13 +31,8 @@ const Service = () => {
     icon: "ri-shapes-fill",
     desc: "Premium thermocol, foam cutting and decorative branding solutions.",
       path: "/services/stylefoam",
-  },
-  {
-    title: "TECHNICAL SERVICES",
-    icon: "ri-tools-fill",
-    desc: "Professional lighting, LED walls, sound systems and event technical support.",
-    path: "/services/technical",
   }
+  
 ];
   const gallery = [
     img5,
