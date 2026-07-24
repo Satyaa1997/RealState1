@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Navigate, useNavigate } from "react-router-dom";
 import "./Service.css";
 import img5 from "../assets/gal1.jpg";
 import img6 from "../assets/gal2.jpg";
@@ -9,26 +9,34 @@ import img9 from "../assets/gal5.jpg";
 import img10 from "../assets/gal6.jpg";
 
 const Service = () => {
+
+
+  const nevigate = useNavigate();
+
   const services = [
   {
     title: "EXIBITION STANDS",
     icon: "ri-building-4-fill",
-    desc: "Creative exhibition stall designing and fabrication with quality materials."
+    desc: "Creative exhibition stall designing and fabrication with quality materials.",
+     path: "/services/exhibition",
   },
   {
     title: "FABRICATION WORK",
     icon: "ri-hammer-fill",
-    desc: "Custom fabrication services for exhibition stands and display structures."
+    desc: "Custom fabrication services for exhibition stands and display structures.",
+     path: "/services/fabrication",
   },
   {
     title: "STYLEFOAM ARTS",
     icon: "ri-shapes-fill",
-    desc: "Premium thermocol, foam cutting and decorative branding solutions."
+    desc: "Premium thermocol, foam cutting and decorative branding solutions.",
+      path: "/services/stylefoam",
   },
   {
     title: "TECHNICAL SERVICES",
     icon: "ri-tools-fill",
-    desc: "Professional lighting, LED walls, sound systems and event technical support."
+    desc: "Professional lighting, LED walls, sound systems and event technical support.",
+    path: "/services/technical",
   }
 ];
   const gallery = [
@@ -70,7 +78,7 @@ const Service = () => {
 
                 <p>{item.desc}</p>
 
-                <button>Visit</button>
+                <button onClick={()=> nevigate(item.path)}>Visit</button>
 
               </div>
 

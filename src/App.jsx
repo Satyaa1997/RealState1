@@ -5,6 +5,10 @@ import About from "./Component/About";
 import Service from "./Component/Service";
 import Project from "./Component/Project";
 import Contact from "./Component/Contact";
+import ExhibitionStands from "./assets/Pages/ExhibitionStands"
+import FabricationWork from "./assets/Pages/FabricationWork";
+import StylefoamArts from "./assets/Pages/StylefoamArts";
+import TechnicalServices from "./assets/Pages/TechnicalServices";
 import Testimonial from "./Component/Testimonial";
 import { Routes, Route } from "react-router-dom";
 import Rural from "./assets/Pages/Rural";
@@ -34,6 +38,14 @@ const App = () => {
         <Route path="/about" element={<About />} />
 
         <Route path="/service" element={<Service />} />
+
+        <Route path="/services/exhibition" element={<ExhibitionStands />} />
+
+        <Route path="/services/fabrication" element={<FabricationWork />} />
+
+        <Route path="/services/stylefoam" element={<StylefoamArts />} />
+
+        <Route path="/services/technical" element={<TechnicalServices />} />
 
         <Route path="/project" element={<Project />} />
 

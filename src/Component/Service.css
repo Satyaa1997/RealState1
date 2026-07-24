@@ -6,15 +6,41 @@
 
 .service-page{
     width:100%;
-    padding:70px 7%;
-    background:#b3d1ee;
+    background:#f8fafc;
+    padding:0;
+}
+.service-section{
+    position: relative;
+
+    padding:100px 7%;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+        url("../assets/gal2.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+    overflow:hidden;
+}
+
+.service-text{
+    color:#f1f5f9;
 }
 
 /* ===========================
    Heading
 =========================== */
 
-.service-section h2,
+.service-section h2{
+      text-align:center;
+    font-size:42px;
+    color:#fff;
+    margin-bottom:15px;
+}
 .gallery-section h2{
     text-align:center;
     font-size:42px;
@@ -22,7 +48,15 @@
     margin-bottom:15px;
 }
 
-.service-text,
+.service-text{
+   width:70%;
+    margin:auto;
+    text-align:center;
+    line-height:28px;
+    color:#fff;
+    margin-bottom:55px;
+    font-size:17px;  
+}
 .gallery-text{
     width:70%;
     margin:auto;
@@ -44,13 +78,22 @@
 }
 
 .service-card{
-    background:#fff;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.25);
+
     border-radius:18px;
+
     padding:25px 20px;
+
     text-align:center;
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
     transition:.4s;
-    border:1px solid #e2e8f0;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
 .service-card:hover{
@@ -89,7 +132,7 @@
 
 .service-content h3{
     font-size:20px;
-    color:#0f172a;
+    color:#fff;
     margin-bottom:18px;
 }
 
@@ -125,6 +168,7 @@
 
 .gallery-section{
     margin-top:90px;
+    margin-bottom: 40px;
 }
 
 .gallery-grid{

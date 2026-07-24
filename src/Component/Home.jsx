@@ -62,15 +62,6 @@ const Home = () => {
               Build X Events & Exhibition is a leading exhibition stand design,
               event productionsed in Dubai, UAE.
             </p>
-            <p>
-              We transform creative ideas into impactful brand experiences
-              manufacturing.
-            </p>
-            <p>
-              From concept development to installation, our experienced client's
-              unique requirements.
-            </p>
-
             <button onClick={() => navigate("/contact")}>
               {" "}
               Get Free Quote

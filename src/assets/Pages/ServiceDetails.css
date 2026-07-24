@@ -1,0 +1,107 @@
+.service-details{
+    background:#f8fafc;
+}
+
+.details-banner{
+    height:450px;
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.details-banner::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.overlay{
+    position:relative;
+    color:#fff;
+    text-align:center;
+}
+
+.overlay h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.overlay p{
+    color:#fff;
+    font-size:20px;
+}
+
+.exhibition-banner{
+    background-image:url("../assets/gal1.jpg");
+}
+
+.fabrication-banner{
+    background-image:url("../assets/gal2.jpg");
+}
+
+.foam-banner{
+    background-image:url("../assets/gal3.jpg");
+}
+
+.technical-banner{
+    background-image:url("../assets/gal4.jpg");
+}
+
+.details-container{
+    width:90%;
+    margin:auto;
+    padding:80px 0;
+}
+
+.details-container h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:38px;
+}
+
+.details-container p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:30px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.feature-card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+}
+
+.feature-card h3{
+    margin-bottom:12px;
+    color:#0d6efd;
+}
+
+@media(max-width:768px){
+
+.overlay h1{
+    font-size:36px;
+}
+
+.feature-grid{
+    grid-template-columns:1fr;
+}
+
+}
