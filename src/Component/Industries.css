@@ -1,0 +1,279 @@
+/*=========================
+      INDUSTRIES PAGE
+=========================*/
+
+.industries{
+    width:100%;
+    padding:80px 7%;
+    background:#f8f9fc;
+}
+
+/*=========================
+        Heading
+=========================*/
+
+.industries-heading{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.industries-heading h5{
+    color:#0d6efd;
+    font-size:15px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.industries-heading h2{
+    font-size:42px;
+    color:#111;
+    margin-bottom:18px;
+}
+
+.industries-heading p{
+    max-width:800px;
+    margin:auto;
+    font-size:16px;
+    line-height:30px;
+    color:#666;
+}
+
+/*=========================
+        Grid
+=========================*/
+
+.industries-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+/*=========================
+        Card
+=========================*/
+
+.industry-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.industry-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+}
+
+.industry-image{
+    overflow:hidden;
+}
+
+.industry-image img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.industry-card:hover img{
+    transform:scale(1.08);
+}
+
+.industry-content{
+    padding:22px;
+}
+
+.industry-content h3{
+    font-size:22px;
+    color:#111;
+    margin-bottom:12px;
+}
+
+.industry-content p{
+    color:#666;
+    line-height:28px;
+    font-size:15px;
+}
+
+/*=========================
+      Bottom Section
+=========================*/
+
+.industry-bottom{
+    margin-top:80px;
+    background:#0d1b2a;
+    color:#fff;
+    padding:70px 40px;
+    border-radius:18px;
+    text-align:center;
+}
+
+.industry-bottom h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.industry-bottom p{
+    max-width:850px;
+    margin:auto;
+    line-height:32px;
+    font-size:17px;
+    color:#ddd;
+}
+
+/*=========================
+      Large Tablet
+=========================*/
+
+@media(max-width:1200px){
+
+.industries-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+/*=========================
+        Tablet
+=========================*/
+
+@media(max-width:992px){
+
+.industries{
+    padding:70px 5%;
+}
+
+.industries-heading h2{
+    font-size:36px;
+}
+
+.industries-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.industry-image img{
+    height:220px;
+}
+
+.industry-bottom{
+    padding:60px 30px;
+}
+
+.industry-bottom h2{
+    font-size:34px;
+}
+
+}
+
+/*=========================
+        Mobile
+=========================*/
+
+@media(max-width:768px){
+
+.industries{
+    padding:60px 20px;
+}
+
+.industries-heading{
+    margin-bottom:40px;
+}
+
+.industries-heading h5{
+    font-size:13px;
+}
+
+.industries-heading h2{
+    font-size:30px;
+}
+
+.industries-heading p{
+    font-size:15px;
+    line-height:28px;
+}
+
+.industries-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.industry-image img{
+    height:230px;
+}
+
+.industry-content{
+    padding:18px;
+}
+
+.industry-content h3{
+    font-size:21px;
+}
+
+.industry-content p{
+    font-size:14px;
+    line-height:26px;
+}
+
+.industry-bottom{
+    margin-top:60px;
+    padding:45px 20px;
+}
+
+.industry-bottom h2{
+    font-size:28px;
+}
+
+.industry-bottom p{
+    font-size:15px;
+    line-height:28px;
+}
+
+}
+
+/*=========================
+      Small Mobile
+=========================*/
+
+@media(max-width:480px){
+
+.industries{
+    padding:50px 15px;
+}
+
+.industries-heading h2{
+    font-size:26px;
+}
+
+.industries-heading p{
+    font-size:14px;
+}
+
+.industry-image img{
+    height:200px;
+}
+
+.industry-content h3{
+    font-size:20px;
+}
+
+.industry-content p{
+    font-size:14px;
+}
+
+.industry-bottom{
+    padding:35px 18px;
+}
+
+.industry-bottom h2{
+    font-size:24px;
+}
+
+.industry-bottom p{
+    font-size:14px;
+    line-height:25px;
+}
+
+}

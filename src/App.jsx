@@ -22,6 +22,7 @@ import FabricationWork from "./assets/Pages/FabricationWork";
 import StylefoamArts from "./assets/Pages/StylefoamArts";
 import TechnicalServices from "./assets/Pages/TechnicalServices";
 import Capabilities from "./assets/Pages/Capabilities";
+import Industries from "./Component/Industries";
 
 const App = () => {
   return (
@@ -53,6 +54,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/capabilities" element={<Capabilities />} />
+
+        <Route path="/industries" element={<Industries />} />
 
         <Route path="/blog" element={<Blog />} />
 

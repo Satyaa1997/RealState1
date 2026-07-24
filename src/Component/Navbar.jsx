@@ -102,8 +102,8 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/testimonial" onClick={() => setMenuOpen(false)}>
-            Testimonial
+          <Link to="/industries" onClick={() => setMenuOpen(false)}>
+            Industry
           </Link>
         </li>
 
