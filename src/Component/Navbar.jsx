@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [serviceOpen, setServiceOpen] = useState(false);
 
   return (
     <nav className="navbar">
@@ -31,38 +31,66 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <li className="dropdown">
-  <Link to="/service" onClick={() => setMenuOpen(false)}>
-    Service
-  </Link>
+        <li
+          className="dropdown"
+          onClick={() => {
+            if (window.innerWidth <= 768) {
+              setServiceOpen(!serviceOpen);
+            }
+          }}
+        >
+          <span className="service-link">Service ▾</span>
 
-  <ul className="dropdown-menu">
-    <li>
-      <Link to="/services/exhibition" onClick={() => setMenuOpen(false)}>
-        Exhibition Stands
-      </Link>
-    </li>
+          <ul className={serviceOpen ? "dropdown-menu show" : "dropdown-menu"}>
+            <li>
+              <Link
+                to="/services/exhibition"
+                onClick={() => {
+                  setMenuOpen(false);
+                  setServiceOpen(false);
+                }}
+              >
+                Exhibition Stands
+              </Link>
+            </li>
 
-    <li>
-      <Link to="/services/fabrication" onClick={() => setMenuOpen(false)}>
-        Fabrication Work
-      </Link>
-    </li>
+            <li>
+              <Link
+                to="/services/fabrication"
+                onClick={() => {
+                  setMenuOpen(false);
+                  setServiceOpen(false);
+                }}
+              >
+                Fabrication Work
+              </Link>
+            </li>
 
-    <li>
-      <Link to="/services/stylefoam" onClick={() => setMenuOpen(false)}>
-        Stylefoam Arts
-      </Link>
-    </li>
+            <li>
+              <Link
+                to="/services/stylefoam"
+                onClick={() => {
+                  setMenuOpen(false);
+                  setServiceOpen(false);
+                }}
+              >
+                Stylefoam Arts
+              </Link>
+            </li>
 
-    <li>
-      <Link to="/services/technical" onClick={() => setMenuOpen(false)}>
-        Technical Services
-      </Link>
-    </li>
-  </ul>
-</li>
-
+            <li>
+              <Link
+                to="/services/technical"
+                onClick={() => {
+                  setMenuOpen(false);
+                  setServiceOpen(false);
+                }}
+              >
+                Technical Services
+              </Link>
+            </li>
+          </ul>
+        </li>
         <li>
           <Link to="/project" onClick={() => setMenuOpen(false)}>
             Project
@@ -82,12 +110,19 @@ const Navbar = () => {
         </li>
 
         <li className="mobile-btn">
-          <button className="inquiry-btn" onClick={()=> navigate("/contact")}>Inquiry Now</button>
+          <button className="inquiry-btn" onClick={() => navigate("/contact")}>
+            Inquiry Now
+          </button>
         </li>
       </ul>
 
       {/* Desktop Button */}
-      <button className="inquiry-btn desktop-btn" onClick={()=> navigate("/contact")}>Inquiry Now</button>
+      <button
+        className="inquiry-btn desktop-btn"
+        onClick={() => navigate("/contact")}
+      >
+        Inquiry Now
+      </button>
 
       {/* Mobile Menu Icon */}
       <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>

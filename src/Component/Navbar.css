@@ -82,7 +82,16 @@
 .dropdown {
   position: relative;
 }
+.service-link{
+  color:#000;
+  font-size:17px;
+  font-weight:500;
+  cursor:pointer;
+}
 
+.service-link:hover{
+  color:#00d4ff;
+}
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -104,7 +113,11 @@
   z-index: 999;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.show {
   display: block;
 }
 
@@ -245,5 +258,15 @@
 .menu-icon{
     font-size:28px;
 }
+.service-link{
+    color:#fff;
+    font-size:18px;
+    display:block;
+}
 
+}
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
 }
