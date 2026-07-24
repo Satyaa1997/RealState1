@@ -49,7 +49,7 @@ const Home = () => {
     <>
       {/* Hero Slider */}
 
-      <section className="hero">
+      <section className="home-hero">
         <div
           className="slider"
           style={{ backgroundImage: `url(${slides[current]})` }}
