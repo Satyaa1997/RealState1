@@ -175,6 +175,41 @@
 
 /*============== Mobile ==============*/
 
+/* Mobile Dropdown */
+@media (max-width:768px){
+
+  .dropdown{
+    width:100%;
+    text-align:center;
+  }
+
+  .dropdown-menu{
+    position: static;      /* absolute हटाओ */
+    width:100%;
+    background:#fff;
+    border-radius:6px;
+    margin-top:8px;
+    box-shadow:none;
+  }
+
+  .dropdown-menu li{
+    width:100%;
+  }
+
+  .dropdown-menu li a{
+    display:block;
+    padding:12px;
+    color:#000 !important;
+    text-align:center;
+  }
+
+  .dropdown-menu li a:hover{
+    background:#f2f2f2;
+    color:#0d6efd !important;
+  }
+
+}
+
 @media(max-width:576px){
 
 .navbar{
