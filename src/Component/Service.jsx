@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import "./Service.css";
 import img5 from "../assets/gal1.jpg";
@@ -10,7 +10,7 @@ import img10 from "../assets/gal6.jpg";
 
 const Service = () => {
 
-
+  const [selectedImage, setSelectedImage] = useState(null);
   const nevigate = useNavigate();
 
   const services = [
@@ -104,18 +104,44 @@ const Service = () => {
 
           {gallery.map((img, index) => (
 
-            <div className="gallery-card" key={index}>
+             <div className="gallery-card" key={index}>
 
-              <img src={img} alt={`gallery-${index}`} />
+               <img
+                 src={img}
+                 alt={`gallery-${index}`}
+                 onClick={() => setSelectedImage(img)}
+                 style={{ cursor: "pointer" }}
+               />
 
-            </div>
+             </div>
 
-          ))}
+           ))}
 
         </div>
 
       </section>
+        {selectedImage && (
+  <div
+    className="image-popup"
+    onClick={() => setSelectedImage(null)}
+  >
+    <button
+      className="close-btn"
+      onClick={(e) => {
+        e.stopPropagation();
+        setSelectedImage(null);
+      }}
+    >
+      ✕
+    </button>
 
+    <img
+      src={selectedImage}
+      alt="Preview"
+      onClick={(e) => e.stopPropagation()}
+    />
+  </div>
+)}
     </div>
   );
 };

@@ -738,3 +738,87 @@
     width: 70px;
   }
 }
+/*==========================
+Image Popup
+==========================*/
+
+.image-popup{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.92);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+}
+
+.image-popup img{
+    width:80%;
+    max-width:900px;
+    max-height:85vh;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    animation:zoom .3s ease;
+}
+
+.close-btn{
+    position:absolute;
+
+    top:20px;
+    right:25px;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:black;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.close-btn:hover{
+
+    background:#0d6efd;
+
+    color:white;
+
+    transform:rotate(90deg);
+
+}
+
+@keyframes zoom{
+
+from{
+
+transform:scale(.8);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
