@@ -21,6 +21,7 @@ import ExhibitionStands from "./assets/Pages/ExhibitionStands"
 import FabricationWork from "./assets/Pages/FabricationWork";
 import StylefoamArts from "./assets/Pages/StylefoamArts";
 import TechnicalServices from "./assets/Pages/TechnicalServices";
+import Capabilities from "./assets/Pages/Capabilities";
 
 const App = () => {
   return (
@@ -50,6 +51,8 @@ const App = () => {
         <Route path="/loan" element={<Loan />} />
 
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="/capabilities" element={<Capabilities />} />
 
         <Route path="/blog" element={<Blog />} />
 

@@ -92,11 +92,15 @@ const Navbar = () => {
           </ul>
         </li>
         <li>
+          <Link to="/capabilities" onClick={() => setMenuOpen(false)}>
+            Capabilities
+          </Link>
+        </li>
+        <li>
           <Link to="/project" onClick={() => setMenuOpen(false)}>
             Project
           </Link>
         </li>
-
         <li>
           <Link to="/testimonial" onClick={() => setMenuOpen(false)}>
             Testimonial
@@ -108,7 +112,7 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-
+        
         <li className="mobile-btn">
           <button className="inquiry-btn" onClick={() => navigate("/contact")}>
             Inquiry Now
